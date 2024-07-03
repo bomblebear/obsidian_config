@@ -1,0 +1,260 @@
+{
+  "main": {
+    "id": "aa869dd8f24ba932",
+    "type": "split",
+    "children": [
+      {
+        "id": "571a822edacd0a6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fb39b48477906e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1_My Notes/CS/C++Primer Plus.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "be270ff8e9993266",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3_Fuel Cell/😶小论文.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8ffd9e9e93ddc24c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3_Fuel Cell/Agent对比.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4beec72e9e2923d5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "674eb81980a88b38",
+    "type": "split",
+    "children": [
+      {
+        "id": "af8b021ce25c9f3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "193e66fad01447a5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8f3aa9d50b35a7cf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "477ae4a0df65bf8c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 220.50469589233398
+  },
+  "right": {
+    "id": "34ed8b3f4374b1d5",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca5daf27829de195",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c7e19735d1fa2ad2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "1_My Notes/CS/C++Primer Plus.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ae87d1d3abf021a7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "1_My Notes/CS/C++Primer Plus.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2bf63033d743933b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "49fa6a0234d22f02",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "1_My Notes/CS/C++Primer Plus.md"
+              }
+            }
+          },
+          {
+            "id": "919e290be3f84bf6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "e36850138b90a136",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 328.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "dbfolder:Create a new database table": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": true,
+      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "4beec72e9e2923d5",
+  "lastOpenFiles": [
+    "3_Fuel Cell/Agent对比.md",
+    "1_My Notes/CS/C++Primer Plus.md",
+    "5_Messed-up/读书笔记/📖 读过的书和看过的剧.md",
+    "📑Basic Knowledge build up for Obsidian.md",
+    "📌HOME PAGE.md",
+    "💡Reminder For 2024.md",
+    "1_My Notes/CS/C Primer Plus.md",
+    "5_Messed-up/读书笔记/随摘.md",
+    "5_Messed-up/读书笔记/冰火摘录.md",
+    "1_My Notes/CS/attachments/C++Primer Plus-20240624.png",
+    "3_Fuel Cell/😶小论文.md",
+    "5_Messed-up/读书笔记/一个火箭而已有必要这么引人遐想吗.md",
+    "5_Messed-up/文案/📕下一篇小红书文案.md",
+    "3_Fuel Cell/内容充实的几个想法.md",
+    "Untitled.md",
+    "3_Fuel Cell/🧠毕设最后的方向.md",
+    "5_Messed-up/摘录/7..md",
+    "5_Messed-up/读书笔记/attachments/93b41e3a9f5ec95ba75b6569040c7293_MD5.jpg",
+    "5_Messed-up/读书笔记/attachments/一个火箭而已有必要这么引人遐想吗-20240607-2.png",
+    "5_Messed-up/读书笔记/attachments/一个火箭而已有必要这么引人遐想吗-20240607-1.png",
+    "5_Messed-up/摘录/6. 如何评价life on mars这首歌？.md",
+    "5_Messed-up/读书笔记/attachments/一个火箭而已有必要这么引人遐想吗-20240607.png",
+    "3_Fuel Cell/摘录/0. 论文工具.md",
+    "0002-06-01.md",
+    "1_My Notes/学习摘录&资料/automotive/🐞MBD开发嵌入式软件的C语言基础.md",
+    "1_My Notes/CS/Python.md",
+    "1_My Notes/Communication Protocol/CANoe回放数据.md",
+    "1_My Notes/python.md",
+    "1_My Notes/Communication Protocol/CAPL.md",
+    "1_My Notes/Basics/4_Clash.md",
+    "1_My Notes/Basics/1_Windows.md",
+    "1_My Notes/attachments/ProgrammingWithCAPL.pdf",
+    "4_Career/attachments/62ccbda5796f38b6bac12a88538cc97.jpg",
+    "4_Career/attachments/567e2e82b3680cb28c5776cad99855ec_MD5.jpg",
+    "3_Fuel Cell/attachments/Agent对比-20240508-1.png",
+    "3_Fuel Cell/attachments/Agent对比-20240508.png",
+    "3_Fuel Cell/attachments/Agent对比-20240507-2.png",
+    "attachments/~2ac5d9eaf8fc8d5b32dbb30912cfeb3_MD5.tmp",
+    "attachments/wallhaven-4xezrl.jpg.~tmp",
+    "1_My Notes/学习摘录&资料/automotive/attachments/Electric Motors and Drives - Fundamentals Types and Applications - Elsevier (2019).pdf",
+    "1_My Notes/学习摘录&资料/automotive/attachments/Unconfirmed 561082.crdownload",
+    "1_My Notes/学习摘录&资料/automotive/attachments",
+    "1_My Notes/学习摘录&资料/automotive",
+    "4_Career/1. Tongji Univ/本科/attachments",
+    "4_Career/1. Tongji Univ/本科",
+    "1_My Notes/学习摘录&资料/傅里叶变换相关/attachments",
+    "未命名.canvas",
+    "Untitled.canvas"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "accentColor": "",
+  "theme": "moonstone",
+  "nativeMenus": true,
+  "translucency": false,
+  "interfaceFontFamily": "Source Han Sans CN VF",
+  "monospaceFontFamily": "Ubuntu Mono",
+  "enabledCssSnippets": [
+    "test",
+    "pic_centering",
+    "strong",
+    "inline_code",
+    "bearman_style"
+  ],
+  "baseFontSize": 13,
+  "cssTheme": "",
+  "textFontFamily": "Source Han Sans CN VF",
+  "showViewHeader": true
+}

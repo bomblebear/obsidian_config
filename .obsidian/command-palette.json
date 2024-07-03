@@ -1,0 +1,10 @@
+{
+  "pinned": [
+    "obsidian-emoji-toolbar:emoji-picker:open-picker",
+    "switcher:open",
+    "markdown:add-metadata-property",
+    "workspace:export-pdf",
+    "editor:insert-link",
+    "consistent-attachments-and-links:replace-all-wikilinks-with-markdown-links"
+  ]
+}

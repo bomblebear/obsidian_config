@@ -1,0 +1,133 @@
+/* obsidian.css */
+
+/* 定义图片居中 */
+img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+}
+    
+ .markdown-source-view.mod-cm6 .cm-content > * {
+        margin: auto auto !important;
+}
+
+
+/* 定义行内代码的颜色 */
+.cm-s-obsidian span.cm-inline-code
+{
+    color: purple;   
+    font-size: 0.95em; /* 相对于父元素的字体大小 */
+}
+
+
+
+/* 定义加粗字体颜色 */
+.cm-strong, b, strong{
+  color: #3498db; /* 这里是深蓝色的示例 */
+  font-weight: 800;
+}
+
+/* 定义斜体颜色 */
+.cm-em, i, em {
+    color: #3498db; /* 这里是深蓝色的示例 */
+}
+
+
+/* 下面是1234级标题 */
+
+.HyperMD-header-1, .inline-title[data-level='1'], .HyperMD-list-line .cm-header-1 {
+
+    color:  ;
+    line-height: 2.7; /* 行间距为2倍 */
+    font-weight: 540
+
+}
+
+.HyperMD-header-2, .inline-title[data-level='2'], .HyperMD-list-line .cm-header-2 {
+
+    color: ;
+    line-height: 2.3; /* 行间距为1.7倍 */
+    font-weight: 540
+
+}
+
+.HyperMD-header-3, .inline-title[data-level='3'], .HyperMD-list-line .cm-header-3 {
+
+    color: ;
+    line-height: 2.0; /* 行间距为1.5倍 */
+    font-weight: 530
+
+}
+
+.HyperMD-header-4, .inline-title[data-level='4'], .HyperMD-list-line .cm-header-4 {
+
+    color: ;
+    line-height: 1.9; /* 行间距为1.5倍 */
+    font-weight: 530
+
+}
+
+
+
+/* 强调的字体 ==这是强调字体==，17px */
+
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .markdown-rendered mark
+{
+    background-color: ;
+    color: ;
+    line-height: 2.2; /* 行间距为2倍 */
+    font-size: 1.25em; /* 相对于父元素的字体大小 */
+    font-weight: bold; /* 加粗 */
+}
+
+
+/* 调整正文行间距 */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+.markdown-rendered p
+{
+    line-height: 1.6; /* 行间距为1.5倍 */
+}
+
+
+/* 给超链接格式添加一个背景色 */
+.markdown-source-view.mod-cm6 .cm-link .cm-underline,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline, .external-link {
+    background-color: #f2f2f2; /* 淡灰色的背景色 */
+    padding: ; /* 可以根据需要添加内边距 2px */
+}
+
+
+
+/* 引用文字减小大小 */
+.cm-s-obsidian span.cm-quote.cm-quote-1
+{
+    font-size: 0.85em; /* 相对于父元素的字体大小 */
+}
+
+
+/* 角注颜色 */
+.cm-s-obsidian span.cm-footref
+{
+
+    color:purple;
+
+}
+
+
+.markdown-source-view.mod-cm6 .cm-embed-block{
+    font-size: 1.15em
+}
+
+
+/* 有序列表颜色 */
+.cm-s-obsidian .cm-formatting-list {
+    color: palevioletred;
+    font-weight: bold; /* 加粗 */
+}
+
+
+
+
+
+
+

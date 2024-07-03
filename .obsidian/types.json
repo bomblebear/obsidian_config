@@ -1,0 +1,9 @@
+{
+  "types": {
+    "aliases": "checkbox",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "创建时间": "date",
+    "是否完成": "checkbox"
+  }
+}
