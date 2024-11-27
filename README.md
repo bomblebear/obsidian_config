@@ -328,7 +328,7 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 
 1. 只需要将`.obsidian`文件夹整个复制到新的仓库即可，里面会包含所有已经设置好的`json`以及插件配置；
 2. 由于我使用了自己的字体配置，所有加入了一个`font`文件夹，将字体文件安装到本地即可删除；不希望使用该字体的可以分别改成**微软雅黑**和**consolas**；
-3. 设置中开启commutiy plugins
+3. 设置中开启`commutiy plugins`
 4. 为了可以使用`ctrl`+鼠标滚轮进行缩放，设置中`appearance`打开`quick font size adjustment`
 
 
