@@ -4,58 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "571a822edacd0a6b",
+        "id": "e5c4c0571f17dc3f",
         "type": "tabs",
         "children": [
           {
-            "id": "7fb39b48477906e3",
+            "id": "34c3452538ad4495",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_My Notes/CS/C++Primer Plus.md",
+                "file": "3_My Notes/摘录_资料_百科/计算机基础/动态链接库与静态链接库有什么区别？.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "动态链接库与静态链接库有什么区别？"
             }
           },
           {
-            "id": "be270ff8e9993266",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3_Fuel Cell/😶小论文.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ffd9e9e93ddc24c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3_Fuel Cell/Agent对比.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4beec72e9e2923d5",
+            "id": "27c68ae499d246c7",
             "type": "leaf",
             "state": {
               "type": "empty",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -75,7 +52,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -84,13 +63,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Link",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -98,14 +79,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 220.50469589233398
+    "width": 262.504695892334
   },
   "right": {
     "id": "34ed8b3f4374b1d5",
@@ -121,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_My Notes/CS/C++Primer Plus.md",
+                "file": "4_Career/📌秋招信息记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +112,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 📌秋招信息记录"
             }
           },
           {
@@ -138,10 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_My Notes/CS/C++Primer Plus.md",
+                "file": "4_Career/📌秋招信息记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 📌秋招信息记录"
             }
           },
           {
@@ -152,7 +139,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -161,8 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_My Notes/CS/C++Primer Plus.md"
-              }
+                "file": "3_My Notes/摘录_资料_百科/计算机基础/动态链接库与静态链接库有什么区别？.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 动态链接库与静态链接库有什么区别？"
             }
           },
           {
@@ -174,7 +165,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           },
           {
@@ -182,7 +175,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
         ],
@@ -190,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5
+    "width": 296.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,58 +197,58 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": true,
-      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "4beec72e9e2923d5",
+  "active": "34c3452538ad4495",
   "lastOpenFiles": [
-    "3_Fuel Cell/Agent对比.md",
-    "1_My Notes/CS/C++Primer Plus.md",
-    "5_Messed-up/读书笔记/📖 读过的书和看过的剧.md",
-    "📑Basic Knowledge build up for Obsidian.md",
-    "📌HOME PAGE.md",
-    "💡Reminder For 2024.md",
-    "1_My Notes/CS/C Primer Plus.md",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/2a96c9fbbadd2378b90c8768e2aea80d_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/922cd6661ec4cadf06c504d2f8bd7bb8_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/9aa5ff7d98ea6f79749e5abb6b2eb284_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/09a0eb569b16226a401cea31aec3211c_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/3c610ef6ef087d19d7c50a6a4166aeb2_MD5.jpg",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/da443249ad08ee32eda6e9764b3493b4_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/ab18be1a840c6972549baf275c0d7cde_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/6c9619e86931e7f70191c4550ca52022_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/f6dbce34a13c0973f1c0a1a39b01bb7a_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/9e7fedd0402dcf427f8bcca6354417df_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments/b020fbc7c45614547cccfd9b1bfa87a7_MD5.png",
+    "3_My Notes/摘录_资料_百科/计算机基础/attachments",
+    "3_My Notes/CS/C Primer Plus.md",
+    "3_My Notes/摘录_资料_百科/计算机基础/动态链接库与静态链接库有什么区别？.md",
+    "3_My Notes/摘录_资料_百科/计算机基础",
+    "4_Fuel Cell/智能控制调研.md",
+    "3_My Notes/OS/RTOS.md",
+    "4_Fuel Cell/USBCAN2使用说明.pdf",
     "5_Messed-up/读书笔记/随摘.md",
-    "5_Messed-up/读书笔记/冰火摘录.md",
-    "1_My Notes/CS/attachments/C++Primer Plus-20240624.png",
-    "3_Fuel Cell/😶小论文.md",
-    "5_Messed-up/读书笔记/一个火箭而已有必要这么引人遐想吗.md",
-    "5_Messed-up/文案/📕下一篇小红书文案.md",
-    "3_Fuel Cell/内容充实的几个想法.md",
-    "Untitled.md",
-    "3_Fuel Cell/🧠毕设最后的方向.md",
-    "5_Messed-up/摘录/7..md",
-    "5_Messed-up/读书笔记/attachments/93b41e3a9f5ec95ba75b6569040c7293_MD5.jpg",
-    "5_Messed-up/读书笔记/attachments/一个火箭而已有必要这么引人遐想吗-20240607-2.png",
-    "5_Messed-up/读书笔记/attachments/一个火箭而已有必要这么引人遐想吗-20240607-1.png",
-    "5_Messed-up/摘录/6. 如何评价life on mars这首歌？.md",
-    "5_Messed-up/读书笔记/attachments/一个火箭而已有必要这么引人遐想吗-20240607.png",
-    "3_Fuel Cell/摘录/0. 论文工具.md",
-    "0002-06-01.md",
-    "1_My Notes/学习摘录&资料/automotive/🐞MBD开发嵌入式软件的C语言基础.md",
-    "1_My Notes/CS/Python.md",
-    "1_My Notes/Communication Protocol/CANoe回放数据.md",
-    "1_My Notes/python.md",
-    "1_My Notes/Communication Protocol/CAPL.md",
-    "1_My Notes/Basics/4_Clash.md",
-    "1_My Notes/Basics/1_Windows.md",
-    "1_My Notes/attachments/ProgrammingWithCAPL.pdf",
-    "4_Career/attachments/62ccbda5796f38b6bac12a88538cc97.jpg",
-    "4_Career/attachments/567e2e82b3680cb28c5776cad99855ec_MD5.jpg",
-    "3_Fuel Cell/attachments/Agent对比-20240508-1.png",
-    "3_Fuel Cell/attachments/Agent对比-20240508.png",
-    "3_Fuel Cell/attachments/Agent对比-20240507-2.png",
-    "attachments/~2ac5d9eaf8fc8d5b32dbb30912cfeb3_MD5.tmp",
-    "attachments/wallhaven-4xezrl.jpg.~tmp",
-    "1_My Notes/学习摘录&资料/automotive/attachments/Electric Motors and Drives - Fundamentals Types and Applications - Elsevier (2019).pdf",
-    "1_My Notes/学习摘录&资料/automotive/attachments/Unconfirmed 561082.crdownload",
-    "1_My Notes/学习摘录&资料/automotive/attachments",
-    "1_My Notes/学习摘录&资料/automotive",
-    "4_Career/1. Tongji Univ/本科/attachments",
-    "4_Career/1. Tongji Univ/本科",
-    "1_My Notes/学习摘录&资料/傅里叶变换相关/attachments",
+    "5_Messed-up/文案/NIO实习应付-Autonomous System for Vehicle.md",
+    "3_My Notes/摘录_资料_百科/automotive/0_车辆的分类及分级.md",
+    "3_My Notes/摘录_资料_百科/automotive/3_三电相关基础知识.md",
+    "3_My Notes/摘录_资料_百科/automotive/2_电机.md",
+    "3_My Notes/摘录_资料_百科/automotive/1_MBD开发嵌入式软件的C语言基础.md",
+    "3_My Notes/摘录_资料_百科/automotive/Validation & Verification.md",
+    "4_Fuel Cell/毕业论文/✅0_氢气路控制研究计划.md",
+    "4_Fuel Cell/attachments/过程质谱说明书-3.1版.pdf",
+    "4_Fuel Cell/毕业论文/✅4_HIL实验记录.md",
+    "4_Fuel Cell/毕业论文/✅3_模型简化构建及LADRC.md",
+    "4_Fuel Cell/毕业论文/✅2_非线性模型拟合-EKF.md",
+    "4_Fuel Cell/海卓动力/基于氮浓度控制的阳极排气策略-说明文档.md",
+    "4_Fuel Cell/毕业论文/README-为留档写的说明.md",
+    "4_Fuel Cell/毕业论文/🚧99_毕设Word相关.md",
+    "4_Fuel Cell/毕业论文/🧠5_神经网络相关.md",
+    "4_Fuel Cell/毕业论文/✅1_建模及参数辨识.md",
+    "4_Fuel Cell/摘录/提高氢气利用率和改善水平衡，燃料电池系统氢气再循环方案设计分析.md",
+    "4_Fuel Cell/海卓动力/2023 Nov.28th 青岛实验计划.md",
+    "4_Fuel Cell/本科毕设/本科毕设草稿.md",
+    "4_Fuel Cell/本科毕设/氢雄 2022.3~2022.6.md",
+    "3_My Notes/CS/Python.md",
+    "2_Career/0_Resume/attachments",
+    "2_Career/0_Resume",
+    "2_Career/2_XiaomiEV/attachments",
+    "2_Career/2_XiaomiEV",
+    "1_Campus/本科/attachments/毕业证书_缪文雄.pdf",
+    "1_Campus/本科/attachments/学位证书_缪文雄.pdf",
     "未命名.canvas",
     "Untitled.canvas"
   ]

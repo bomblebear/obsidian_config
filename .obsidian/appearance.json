@@ -15,5 +15,6 @@
   "baseFontSize": 13,
   "cssTheme": "",
   "textFontFamily": "Source Han Sans CN VF",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "baseFontSizeAction": true
 }
