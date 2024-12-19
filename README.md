@@ -9,8 +9,8 @@ Obsidian中渲染包含两种格式，编辑模式使用 CodeMirror 编辑器，
 
 然后戳对应的元素，就能看到对应的elements的配置信息了，照这个葫芦来画，然后将保存的css文件放置在 `.obsidian/snippets/` 内，然后在设置中启用CSS代码片段即可
 
-+ 字体套用思源黑体 `Source Han Sans CN VF` 字体详情见 [WindowsFonts](1_My%20Notes/Basics/1_Windows#**10.%20Fonts**)
-+ 代码字体(mono)使用 `Ubuntu Mono` 字体详情见 [WindowsFonts](1_My%20Notes/Basics/1_Windows#**10.%20Fonts**)
++ 字体套用思源黑体 `Source Han Sans CN VF` 
++ 代码字体(mono)使用 `Ubuntu Mono` 
 #### **obsidian.css**
 ```css
 /* obsidian.css */
@@ -141,7 +141,9 @@ img {
 
 + 为了保证markdown文件的可移植性，我选择了在每个目录下建一个附件文件夹（如下图的设置），用于存储大量的图片等附件，但是这样会出现一个问题，万一我想移动md文件的位置，这些附件怎么办？
 + 此插件就可以顺带将附件也一起对应转移的工具；
-![|450](attachments/📑Basic%20Knowledge%20build%20up%20for%20Obsidian.png)
+
+		`Default location for new attachments: In subfolder under current folder`
+		`Subfolder name: attachments`
 
 ==Replace All Wiki Links with Markdown Links==
 Obsidian的wikilink虽然好用简单，但是不具备通用性，但是完全的关闭的话，就不能用markdown格式链接到固定的段落了，所以我是把这个选项开着，然后使用如下命令进行转换：
@@ -159,7 +161,7 @@ markdown引用的图片和文件，如果你把md文件删除，附件其实还�
 
 ### 2.5 🖼️Paste image rename
 直接复制剪贴板的图片进Obsidian的笔记里，命名的方式全是 `paste***`+一堆数字，该插件可以自动或者手动修改名称；
-![](attachments/📑Basic%20Knowledge%20build%20up%20for%20Obsidian-1.png)
+`auto rename`
 ### 2.6 🖼️Mousewheel Image Zoom
 原生的markdown修改图片大小太麻烦了，需要手动修改高度长度信息
 此插件可以通过快捷键 `alt + +/-`完成大小修改
@@ -311,7 +313,7 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 `Ctrl + O`即可快速切换笔记
 
 # **5. 文档同步问题**
-目前使用的是OneDrive，只有一点不是很方便，就是开了代理链接，打开office套件的文件包括同步在内都会出现卡顿，应该是网络问题造成的，不知道怎么解决。
+目前使用的是OneDrive，只有一点不是很方便，就是开了代理链接，打开office套件的文件包括同步在内都会出现卡顿(UWP本地回环问题，已解决)。
 使用OneDrive同步虽然比较方便，但是我在手机上就没办法比较方便的去查阅我的笔记文件咯。
 
 其他同步方案，待查阅
@@ -330,6 +332,7 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 2. 由于我使用了自己的字体配置，所以加入了一个`font`文件夹，将字体文件安装到本地即可删除；不希望使用该字体的可以分别改成**微软雅黑**和**consolas**；
 3. 设置中开启`commutiy plugins`
 4. 为了可以使用`ctrl`+鼠标滚轮进行缩放，设置中`appearance`打开`quick font size adjustment`
+
 
 
 
