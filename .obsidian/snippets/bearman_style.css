@@ -106,7 +106,7 @@ img {
 .cm-s-obsidian span.cm-quote.cm-quote-1
 {
     font-size: 0.85em; /* 相对于父元素的字体大小 */
-    padding-left: 5px; /* 为引用文字增加缩进 */
+    padding-left: 2px; /* 为引用文字增加缩进 */
 }
 /* 预览模式*/
 .markdown-rendered blockquote {
