@@ -205,8 +205,19 @@ img {
 | name | age |
 | ---- | --- |
 | me   | 18  |
+|      |     |
 
 也可以在 `Ctrl + P`在命令面板操作
+
+### 2.9 🎨Excalidraw
+[zsviczian/obsidian-excalidraw-plugin: A plugin to edit and view Excalidraw drawings in Obsidian](https://github.com/zsviczian/obsidian-excalidraw-plugin)
+- 这个插件做的很棒！对我而言，我只需要能够方便快捷的画出一些逻辑框图，如果希望认真画的话还是得去visio
+
+1. 我把`Excalidraw: Cearte new drawing - IN A NEW TAB - and embed into active document`加到了命令窗口的`pin`里面，方便插入绘图；
+2. 因为他的绘图文件格式是`md`文件，这样会造成一个问题，导致`clear unused image`无法对其完成清理，目前我不知道怎么解决；
+3. 正是因为上面这个问题，所以为了便于清理，我没办法把这个绘图文件放在对应`md`文件的`attachments`文件夹中（违背了我的原则😭），把`Basic`设置中的，`Use Excalidraw folder when embedding ...`打开了，放在了一个统一的根目录下的文件夹内；
+
+
 # **3. Markdown**
 + [MarkDown语法 超详细教程 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/435)
 
@@ -214,7 +225,6 @@ img {
 
 + 文本加粗：`ctrl + B`
 + 文本斜体：`ctrl + I`
-
 + **~~这是文本删除线~~**
 ```
 ~~这是一段加了删除线的文本~~
@@ -296,7 +306,7 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 
 ~~尽量去使用markdown原生的链接格式！在设置中将 `use [[wikilinks]]` 关闭~~
 如果关闭就不能方便的链接到段落，只能连接到文章了，所以还是开着吧，**最后可以通过插件全部改正**：
-+ [📑Basic Knowledge build up for Obsidian > 1. Consistent Attachments and Links](📑README.md#1.%20Consistent%20Attachments%20and%20Links)
++ [2.2 📁Consistent Attachments and Links](#2.2%20📁Consistent%20Attachments%20and%20Links) 
 
 ==Tag功能==
 

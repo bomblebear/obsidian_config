@@ -1,10 +1,9 @@
 {
   "pinned": [
     "obsidian-emoji-toolbar:emoji-picker:open-picker",
-    "switcher:open",
-    "markdown:add-metadata-property",
-    "workspace:export-pdf",
+    "obsidian-excalidraw-plugin:excalidraw-autocreate-and-embed-new-tab",
     "editor:insert-link",
-    "consistent-attachments-and-links:replace-all-wikilinks-with-markdown-links"
+    "consistent-attachments-and-links:replace-all-wikilinks-with-markdown-links",
+    "switcher:open"
   ]
 }

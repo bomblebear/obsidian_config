@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e5c4c0571f17dc3f",
+        "id": "0371348a8527b67b",
         "type": "tabs",
         "children": [
           {
-            "id": "34c3452538ad4495",
+            "id": "9decd1737381fb5e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,21 +20,6 @@
               },
               "icon": "lucide-file",
               "title": "📑README"
-            }
-          },
-          {
-            "id": "68d076a8901df4f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📌HOME PAGE.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "📌HOME PAGE"
             }
           }
         ]
@@ -68,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "latex",
+                "query": "[\"创建时间\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.50469589233398
+    "width": 290.504695892334
   },
   "right": {
     "id": "34ed8b3f4374b1d5",
@@ -198,19 +183,43 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": true,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false
+      "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "34c3452538ad4495",
+  "active": "9decd1737381fb5e",
   "lastOpenFiles": [
-    "📌HOME PAGE.md",
-    "💡Reminder For 2024.md",
+    "Excalidraw/Drawing 2024-12-20 14.31.17.excalidraw.md",
     "📑README.md",
+    "Excalidraw/📑README 2024-12-20 14.35.49.excalidraw.md",
+    "💡Reminder For 2024.md",
+    "Excalidraw",
+    "Excalidraw/📑README 2024-12-20 14.30.55.excalidraw.md",
+    "attachments/Excalidraw/📑README 2024-12-20 14.29.39.excalidraw.md",
+    "attachments/Excalidraw/📑README 2024-12-20 14.25.52.excalidraw.md",
+    "attachments/font/Prometo.ttf",
+    "attachments/font",
+    "attachments/📑README 2024-12-20 14.00.13.excalidraw.md",
+    "attachments/Excalidraw/Drawing 2024-12-20 13.44.33.excalidraw.md",
+    "attachments/📑README 2024-12-20 14.11.55.excalidraw.md",
+    "attachments/📑README 2024-12-20 14.06.49.excalidraw.md",
+    "attachments/attachments",
+    "UbuntuMono-B.ttf",
+    "Prometo.ttf",
+    "attachments/📑README 2024-12-20 14.01.00.excalidraw.md",
+    "attachments/Excalidraw/Drawing 2024-12-20 13.43.26.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-20 13.35.36.excalidraw.md",
+    "attachments/Excalidraw",
+    "attachements/Excalidraw/Drawing 2024-12-20 13.42.44.excalidraw.md",
+    "attachements/Excalidraw",
+    "attachements",
+    "3_My Notes/Basics/0_找个合适的笔记软件怎么这么难.md",
+    "Untitled.canvas",
+    "📌HOME PAGE.md",
     "4_Fuel Cell/智能控制调研.md",
     "5_Messed-up/Daily",
     "2024-12-20.md",
@@ -224,36 +233,13 @@
     "4_Fuel Cell/毕业论文/attachments/README-为留档写的说明-20241219.png",
     "4_Fuel Cell/毕业论文/attachments/f2392463247c3ef9d8a099ef7d9a3908_MD5.jpg",
     "4_Fuel Cell/毕业论文/attachments/1734573168384.jpg",
-    "5_Messed-up/文案/📕下一篇小红书文案.md",
-    "4_Fuel Cell/摘录/0. 论文工具.md",
     "5_Messed-up/文案/attachments/📕下一篇小红书文案-20241217-2.png",
     "5_Messed-up/文案/attachments/📕下一篇小红书文案-20241217-1.png",
     "5_Messed-up/文案/attachments/📕下一篇小红书文案-20241217.png",
-    "5_Messed-up/文案/attachments",
     "3_My Notes/Basics/attachments/1_Windows-20241217.png",
-    "3_My Notes/摘录_资料_百科/1_计算机基础/1_程序编译过程.md",
-    "3_My Notes/Basics/4_Clash.md",
-    "5_Messed-up/读书笔记/📖 读过的书和看过的剧.md",
-    "5_Messed-up/读书笔记/冰火摘录.md",
-    "5_Messed-up/读书笔记/三体重读记录.md",
     "3_My Notes/Basics/attachments/1_Windows-20241216.png",
-    "3_My Notes/Basics/5_WSL.md",
     "3_My Notes/Basics/attachments/5_WSL-20241216.png",
-    "3_My Notes/摘录_资料_百科/傅里叶变换相关/傅里叶级数&傅里叶变换.md",
     "3_My Notes/摘录_资料_百科/傅里叶变换相关/attachments/傅里叶级数&傅里叶变换-20241214-2.png",
-    "3_My Notes/摘录_资料_百科/傅里叶变换相关/一幅图弄清DFT与DTFT,DFS的关系.md",
-    "3_My Notes/摘录_资料_百科/傅里叶变换相关/傅里叶级数和傅里叶变换是什么关系？.md",
-    "3_My Notes/摘录_资料_百科/傅里叶变换相关/如何通俗地理解「采样定理」，该定理是如何提出的，有何价值与应用？.md",
-    "2_Career/0_Resume/📌秋招信息记录.md",
-    "3_My Notes/摘录_资料_百科/1_计算机基础/attachments",
-    "3_My Notes/摘录_资料_百科/1_计算机基础",
-    "4_Fuel Cell/USBCAN2使用说明.pdf",
-    "4_Fuel Cell/attachments/过程质谱说明书-3.1版.pdf",
-    "2_Career/0_Resume/attachments",
-    "2_Career/0_Resume",
-    "2_Career/2_XiaomiEV/attachments",
-    "2_Career/2_XiaomiEV",
-    "未命名.canvas",
-    "Untitled.canvas"
+    "未命名.canvas"
   ]
 }
