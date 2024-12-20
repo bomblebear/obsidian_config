@@ -5,10 +5,15 @@ img {
         display: block !important;
         margin-left: auto !important;
         margin-right: auto !important;
-}
-    
- .markdown-source-view.mod-cm6 .cm-content > * {
+}    
+.markdown-source-view.mod-cm6 .cm-content > * {
         margin: auto auto !important;
+}
+
+/* 定义表格居中 */
+.markdown-reading-view table,
+.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper {
+	margin: 0 auto;
 }
 
 
@@ -143,7 +148,7 @@ ol > li::marker, ul > li::marker {
 
 /* 一级无序列表 */
 .markdown-source-view.mod-cm6 .HyperMD-list-line-1 .list-bullet:after,
-.markdown-reading-view li[data-line="0"] > .list-bullet:after {
+.markdown-reading-view .has-list-bullet .list-bullet:after {
     /* Bullet */
     height: 5px;
     width: 5px;
@@ -153,7 +158,7 @@ ol > li::marker, ul > li::marker {
 }
 /* 二级无序列表 */
 .markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet:after,
-.markdown-reading-view li[data-line="1"] > .list-bullet:after {
+.markdown-reading-view .has-list-bullet .has-list-bullet .list-bullet:after {
     /* Hollow Bullet */
     height: 3px;
     width: 3px;
@@ -165,7 +170,7 @@ ol > li::marker, ul > li::marker {
 }
 /* 三级无序列表 */
 .markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet:after,
-.markdown-reading-view li[data-line="2"] > .list-bullet:after {
+.markdown-reading-view .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet:after {
     /* Hollow Diamond */
     height: 2.5px;
     width: 2.5px;
