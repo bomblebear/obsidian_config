@@ -1,6 +1,6 @@
 {
   "attachmentFolderPath": "./attachments",
-  "promptDelete": false,
+  "promptDelete": true,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",

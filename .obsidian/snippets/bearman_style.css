@@ -17,6 +17,13 @@ img {
 {
     color: purple;   
     font-size: 0.95em; /* 相对于父元素的字体大小 */
+    background-color: #f2f2f2; /* 淡灰色的背景色 */
+}
+/* 预览模式下的行内代码的颜色 */
+.markdown-rendered code {
+    color: purple;   
+    font-size: 0.95em; /* 相对于父元素的字体大小 */
+    background-color: #f2f2f2; /* 淡灰色的背景色 */
 }
 
 
@@ -34,7 +41,6 @@ img {
 
 
 /* 下面是1234级标题 */
-
 .HyperMD-header-1, .inline-title[data-level='1'], .HyperMD-list-line .cm-header-1 {
 
     color:  ;
@@ -70,7 +76,6 @@ img {
 
 
 /* 强调的字体 ==这是强调字体==，17px */
-
 .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .markdown-rendered mark
 {
     background-color: ;
@@ -91,43 +96,82 @@ img {
 
 /* 给超链接格式添加一个背景色 */
 .markdown-source-view.mod-cm6 .cm-link .cm-underline,
-.markdown-source-view.mod-cm6 .cm-url .cm-underline, .external-link {
+.markdown-source-view.mod-cm6 .cm-url .cm-underline, .external-link, .cm-hmd-internal-link{
     background-color: #f2f2f2; /* 淡灰色的背景色 */
-    padding: ; /* 可以根据需要添加内边距 2px */
+    font-size: 0.95em; /* 相对于父元素的字体大小 */
 }
-
 
 
 /* 引用文字减小大小 */
 .cm-s-obsidian span.cm-quote.cm-quote-1
 {
     font-size: 0.85em; /* 相对于父元素的字体大小 */
+    padding-left: 5px; /* 为引用文字增加缩进 */
+}
+/* 预览模式*/
+.markdown-rendered blockquote {
+    font-size: 0.85em; /* 相对于父元素的字体大小 */
+
 }
 
 
 /* 角注颜色 */
 .cm-s-obsidian span.cm-footref
 {
-
     color:purple;
-
 }
 
-
+/* Obsidian的callout模块 */
 .markdown-source-view.mod-cm6 .cm-embed-block{
-    font-size: 1.15em
+    font-size: 1.0em
 }
 
 
 /* 有序列表颜色 */
-.cm-s-obsidian .cm-formatting-list {
+.cm-s-obsidian .cm-formatting-list{
+    color: palevioletred;
+    font-weight: bold; /* 加粗 */
+}
+/* 阅读模式 */
+ol > li::marker, ul > li::marker {
     color: palevioletred;
     font-weight: bold; /* 加粗 */
 }
 
+/* 一级无序列表 */
+.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .list-bullet:after,
+.markdown-reading-view li[data-line="0"] > .list-bullet:after {
+    /* Bullet */
+    height: 5px;
+    width: 5px;
+    background-color: palevioletred;
+    margin-left: 15px; /* 调整间距大小 */
+    margin-right: 18px; /* 调整间距大小 */
+}
+/* 二级无序列表 */
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet:after,
+.markdown-reading-view li[data-line="1"] > .list-bullet:after {
+    /* Hollow Bullet */
+    height: 3px;
+    width: 3px;
+    background-color: Transparent;
+    border-color: palevioletred;
+    border-style: solid;
+    margin-left: 15px; /* 调整间距大小 */
+    margin-right: 18px; /* 调整间距大小 */
+}
+/* 三级无序列表 */
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet:after,
+.markdown-reading-view li[data-line="2"] > .list-bullet:after {
+    /* Hollow Diamond */
+    height: 2.5px;
+    width: 2.5px;
+    background-color: transparent;
+    border-color: palevioletred;
+    border-style: solid;
+    border-radius: 0%; /* 保持角度不变 */
+    transform: rotate(45deg); /* 旋转正方形，形成菱形 */
 
-
-
-
-
+}
+  
 

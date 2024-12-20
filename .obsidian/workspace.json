@@ -13,26 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3_My Notes/摘录_资料_百科/计算机基础/动态链接库与静态链接库有什么区别？.md",
+                "file": "4_Fuel Cell/智能控制调研.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "动态链接库与静态链接库有什么区别？"
+              "title": "智能控制调研"
             }
           },
           {
-            "id": "27c68ae499d246c7",
+            "id": "2929984153cf9da5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "📑README.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "📑README"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Link",
+                "query": "latex",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.504695892334
+    "width": 244.50469589233398
   },
   "right": {
     "id": "34ed8b3f4374b1d5",
@@ -150,10 +156,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3_My Notes/摘录_资料_百科/计算机基础/动态链接库与静态链接库有什么区别？.md"
+                "file": "📑README.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 动态链接库与静态链接库有什么区别？"
+              "title": "Outline of 📑README"
             }
           },
           {
@@ -185,7 +191,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5
+    "width": 268.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,54 +207,53 @@
       "obsidian-local-images-plus:Local Images Plus  0.15.9\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "34c3452538ad4495",
+  "active": "2929984153cf9da5",
   "lastOpenFiles": [
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/2a96c9fbbadd2378b90c8768e2aea80d_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/922cd6661ec4cadf06c504d2f8bd7bb8_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/9aa5ff7d98ea6f79749e5abb6b2eb284_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/09a0eb569b16226a401cea31aec3211c_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/3c610ef6ef087d19d7c50a6a4166aeb2_MD5.jpg",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/da443249ad08ee32eda6e9764b3493b4_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/ab18be1a840c6972549baf275c0d7cde_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/6c9619e86931e7f70191c4550ca52022_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/f6dbce34a13c0973f1c0a1a39b01bb7a_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/9e7fedd0402dcf427f8bcca6354417df_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments/b020fbc7c45614547cccfd9b1bfa87a7_MD5.png",
-    "3_My Notes/摘录_资料_百科/计算机基础/attachments",
-    "3_My Notes/CS/C Primer Plus.md",
-    "3_My Notes/摘录_资料_百科/计算机基础/动态链接库与静态链接库有什么区别？.md",
-    "3_My Notes/摘录_资料_百科/计算机基础",
     "4_Fuel Cell/智能控制调研.md",
-    "3_My Notes/OS/RTOS.md",
-    "4_Fuel Cell/USBCAN2使用说明.pdf",
-    "5_Messed-up/读书笔记/随摘.md",
-    "5_Messed-up/文案/NIO实习应付-Autonomous System for Vehicle.md",
-    "3_My Notes/摘录_资料_百科/automotive/0_车辆的分类及分级.md",
-    "3_My Notes/摘录_资料_百科/automotive/3_三电相关基础知识.md",
-    "3_My Notes/摘录_资料_百科/automotive/2_电机.md",
-    "3_My Notes/摘录_资料_百科/automotive/1_MBD开发嵌入式软件的C语言基础.md",
-    "3_My Notes/摘录_资料_百科/automotive/Validation & Verification.md",
-    "4_Fuel Cell/毕业论文/✅0_氢气路控制研究计划.md",
-    "4_Fuel Cell/attachments/过程质谱说明书-3.1版.pdf",
-    "4_Fuel Cell/毕业论文/✅4_HIL实验记录.md",
-    "4_Fuel Cell/毕业论文/✅3_模型简化构建及LADRC.md",
-    "4_Fuel Cell/毕业论文/✅2_非线性模型拟合-EKF.md",
-    "4_Fuel Cell/海卓动力/基于氮浓度控制的阳极排气策略-说明文档.md",
-    "4_Fuel Cell/毕业论文/README-为留档写的说明.md",
+    "📑README.md",
+    "📌HOME PAGE.md",
+    "5_Messed-up/Daily",
+    "2024-12-20.md",
+    "2024-12-18.md",
+    "2024-12-31.md",
+    "123.md",
+    "💡Reminder For 2024.md",
+    "3_My Notes/python.md",
     "4_Fuel Cell/毕业论文/🚧99_毕设Word相关.md",
-    "4_Fuel Cell/毕业论文/🧠5_神经网络相关.md",
-    "4_Fuel Cell/毕业论文/✅1_建模及参数辨识.md",
-    "4_Fuel Cell/摘录/提高氢气利用率和改善水平衡，燃料电池系统氢气再循环方案设计分析.md",
-    "4_Fuel Cell/海卓动力/2023 Nov.28th 青岛实验计划.md",
-    "4_Fuel Cell/本科毕设/本科毕设草稿.md",
-    "4_Fuel Cell/本科毕设/氢雄 2022.3~2022.6.md",
-    "3_My Notes/CS/Python.md",
+    "3_My Notes/Basics/1_Windows.md",
+    "4_Fuel Cell/毕业论文/README-为留档写的说明.md",
+    "4_Fuel Cell/毕业论文/attachments/README-为留档写的说明-20241219.png",
+    "4_Fuel Cell/毕业论文/attachments/f2392463247c3ef9d8a099ef7d9a3908_MD5.jpg",
+    "4_Fuel Cell/毕业论文/attachments/1734573168384.jpg",
+    "5_Messed-up/文案/📕下一篇小红书文案.md",
+    "4_Fuel Cell/摘录/0. 论文工具.md",
+    "5_Messed-up/文案/attachments/📕下一篇小红书文案-20241217-2.png",
+    "5_Messed-up/文案/attachments/📕下一篇小红书文案-20241217-1.png",
+    "5_Messed-up/文案/attachments/📕下一篇小红书文案-20241217.png",
+    "5_Messed-up/文案/attachments",
+    "3_My Notes/Basics/attachments/1_Windows-20241217.png",
+    "3_My Notes/摘录_资料_百科/1_计算机基础/1_程序编译过程.md",
+    "3_My Notes/Basics/4_Clash.md",
+    "5_Messed-up/读书笔记/📖 读过的书和看过的剧.md",
+    "5_Messed-up/读书笔记/冰火摘录.md",
+    "5_Messed-up/读书笔记/三体重读记录.md",
+    "3_My Notes/Basics/attachments/1_Windows-20241216.png",
+    "3_My Notes/Basics/5_WSL.md",
+    "3_My Notes/Basics/attachments/5_WSL-20241216.png",
+    "3_My Notes/摘录_资料_百科/傅里叶变换相关/傅里叶级数&傅里叶变换.md",
+    "3_My Notes/摘录_资料_百科/傅里叶变换相关/attachments/傅里叶级数&傅里叶变换-20241214-2.png",
+    "3_My Notes/摘录_资料_百科/傅里叶变换相关/一幅图弄清DFT与DTFT,DFS的关系.md",
+    "3_My Notes/摘录_资料_百科/傅里叶变换相关/傅里叶级数和傅里叶变换是什么关系？.md",
+    "3_My Notes/摘录_资料_百科/傅里叶变换相关/如何通俗地理解「采样定理」，该定理是如何提出的，有何价值与应用？.md",
+    "2_Career/0_Resume/📌秋招信息记录.md",
+    "3_My Notes/摘录_资料_百科/1_计算机基础/attachments",
+    "3_My Notes/摘录_资料_百科/1_计算机基础",
+    "4_Fuel Cell/USBCAN2使用说明.pdf",
+    "4_Fuel Cell/attachments/过程质谱说明书-3.1版.pdf",
     "2_Career/0_Resume/attachments",
     "2_Career/0_Resume",
     "2_Career/2_XiaomiEV/attachments",
     "2_Career/2_XiaomiEV",
-    "1_Campus/本科/attachments/毕业证书_缪文雄.pdf",
-    "1_Campus/本科/attachments/学位证书_缪文雄.pdf",
     "未命名.canvas",
     "Untitled.canvas"
   ]
