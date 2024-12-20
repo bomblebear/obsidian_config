@@ -100,7 +100,10 @@ img {
     background-color: #f2f2f2; /* 淡灰色的背景色 */
     font-size: 0.95em; /* 相对于父元素的字体大小 */
 }
-
+.metadata-container .internal-link, .markdown-rendered .internal-link {
+    background-color: #f2f2f2; /* 淡灰色的背景色 */
+    font-size: 0.95em; /* 相对于父元素的字体大小 */
+}
 
 /* 引用文字减小大小 */
 .cm-s-obsidian span.cm-quote.cm-quote-1
