@@ -1,9 +1,7 @@
 # **1. CSS样式设置**
-Obsidian中提供了非常多的主题，但是本人主打一个强迫症，最合适的肯定是自己瞎搞出来的。
+Obsidian中提供了非常多的主题，但是作为强迫整患者，最合适的肯定是自己瞎搞出来的。
 
 Obsidian中渲染包含两种格式，编辑模式使用 CodeMirror 编辑器，而阅读模式则使用渲染后的 Markdown 预览。所以要注意区分一下，这两者对应的元素名称并不相同
-
->而且最搞的是我发现预览模式的行内代码和代码片段元素名称一样，没办法改，改了的话代码片段颜色也变成全紫色了，所以行内代码在预览模式下不是紫色而是浅灰色，稍微有碍观瞻，但是我平时自己都是编辑模式无所谓。（也可能是我自己瞎折腾的，根本没有小心求证）
 
 按 `Ctrl + Shift + I` ，打开开发者工具，点击窗口左上角的**选择网页中的相应元素即可进行检查**，回到 Obsidian 的窗口，此时鼠标移动至任何地方都会有高亮突出显示。
 
@@ -11,7 +9,8 @@ Obsidian中渲染包含两种格式，编辑模式使用 CodeMirror 编辑器，
 
 + 字体套用思源黑体 `Source Han Sans CN VF` 
 + 代码字体(mono)使用 `Ubuntu Mono` 
-#### **obsidian.css**
+
+#### 一个例子**obsidian.css**
 ```css
 /* obsidian.css */
 
@@ -142,8 +141,8 @@ img {
 + 为了保证markdown文件的可移植性，我选择了在每个目录下建一个附件文件夹（如下图的设置），用于存储大量的图片等附件，但是这样会出现一个问题，万一我想移动md文件的位置，这些附件怎么办？
 + 此插件就可以顺带将附件也一起对应转移的工具；
 
-		`Default location for new attachments: In subfolder under current folder`
-		`Subfolder name: attachments`
+	- `Default location for new attachments: In subfolder under current folder`
+	- `Subfolder name: attachments`
 
 ==Replace All Wiki Links with Markdown Links==
 Obsidian的wikilink虽然好用简单，但是不具备通用性，但是完全的关闭的话，就不能用markdown格式链接到固定的段落了，所以我是把这个选项开着，然后使用如下命令进行转换：
@@ -151,14 +150,12 @@ Obsidian的wikilink虽然好用简单，但是不具备通用性，但是完全�
 ==Convert All Link Paths to Relative==
 Obsdian的文件索引完全不需要相对路径（无论是wikilink还是markdown原生的link），虽然在软件内没什么问题，但是如果移植就会不知道文件在哪里了
 ### 2.3 📁Clear Unused Images
-+ Clear Unused Images and Attachments
++ `Clear Unused Images and Attachments`
 markdown引用的图片和文件，如果你把md文件删除，附件其实还没有删除掉；
 本着强迫症的原则，必须解决😡
 ### 2.4 🖼️Local Image Plus
-
 用于从网页复制粘贴文件时，可以自动下载贴图到对应的附件文件夹。
 否则直接复制可能就会出现图片无法解析的现象
-
 ### 2.5 🖼️Paste image rename
 直接复制剪贴板的图片进Obsidian的笔记里，命名的方式全是 `paste***`+一堆数字，该插件可以自动或者手动修改名称；
 `auto rename`
@@ -210,9 +207,7 @@ img {
 | me   | 18  |
 
 也可以在 `Ctrl + P`在命令面板操作
-
 # **3. Markdown**
-
 + [MarkDown语法 超详细教程 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/435)
 
 大部分其实我都知道了，把之前不熟悉的列举一下：
@@ -319,7 +314,6 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 其他同步方案，待查阅
 
 
-
 # **6. 不同显示器缩放问题**
 1. ctrl + 键盘的加号和减号（横排数字键边上的两个）
 2. ctrl + 鼠标滚轮（设置里的外观调整要把鼠标滚轮可以调开关打开）
@@ -332,15 +326,5 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 2. 由于我使用了自己的字体配置，所以加入了一个`font`文件夹，将字体文件安装到本地即可删除；不希望使用该字体的可以分别改成**微软雅黑**和**consolas**；
 3. 设置中开启`commutiy plugins`
 4. 为了可以使用`ctrl`+鼠标滚轮进行缩放，设置中`appearance`打开`quick font size adjustment`
-
-
-
-
-
-
-
-
-
-
 
 
