@@ -90,6 +90,9 @@ img {
     font-weight: bold; /* 加粗 */
 }
 
+.MJX-TEX {
+    font-size: 1.0em; /* 相对于父元素的字体大小 */
+}
 
 /* 调整正文行间距 */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
