@@ -180,12 +180,19 @@ img {
 
 
 ### 2.7 💡Dataview & DB Folder
+>[blacksmithgu/obsidian-dataview: A data index and query language over Markdown files, for https://obsidian.md/.](https://github.com/blacksmithgu/obsidian-dataview)
 
 因为抛弃notion，导致失去了非常好用的database功能TT
+- https://bubblebear.notion.site/
+用Dataview & DB Folder进行补偿方案，但是这个数据库列表有点丑，所以暂时先不用，后面再说吧.
 
-+ [bubblebear's notion site](https://bubblebear.notion.site/)
-
-用Dataview & DB Folder进行补偿方案，但是这个数据库列表有点丑，所以暂时先不用，后面再说吧
+简单语法例如：
+ + 今天是  **`=dateformat(date(today)," yyyy 年 M 月 d 日")`** 
+ + 距离2025年除夕还有 **`= round((date(2025-01-28) - date(now)).days)`** 天
+配合callout
+> [!abstract] 
+> - 今天是  **`=dateformat(date(today)," yyyy 年 M 月 d 日")`** 
+> - 距离2025年除夕还有 **`= round((date(2025-01-28) - date(now)).days)`** 天
 
 ---
 
@@ -272,25 +279,22 @@ img {
 - **Video标签** 支持的视频格式 ：`mp4`, `ogg`, `webm`
 
 
-+ **脚注[^3]**
++ **脚注`[^3]`**
 H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以这么做]入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。 [^1] 比如这是一个简单的脚注，[^1] 这是一个长一些的脚注。[^长脚注] 
 
 [^1]: 这是脚注的内容。
+[^长脚注]:不在乎你的注释是什么，阅读模式下会自动编号
 
 # **4. Obsidian 功能**
-
 > [!Title] 使用原则
 > + 为了保证可迁移性，尽量去使用原生的Markdown语法；
 > + 尽量避免使用wikilink等Obsidian特有语法；
 > + 使用`Consistent Attachments and Links: Replace All Wiki Links with Markdown Links`进行转换；
 > + 这个callout模块就不是原生语法；
-
 + [由此开始 - Obsidian 中文帮助 - Obsidian Publish](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B)
 
 ==Command Palette==
-
 `Ctrl + P`
-
 ==双链笔记&Tag==
 ```
 链接到某一篇笔记：[[ ]]
@@ -317,24 +321,23 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 
 `Ctrl + O`即可快速切换笔记
 
-# **5. 文档同步问题**
-目前使用的是OneDrive，只有一点不是很方便，就是开了代理链接，打开office套件的文件包括同步在内都会出现卡顿(UWP本地回环问题，已解决)。
-使用OneDrive同步虽然比较方便，但是我在手机上就没办法比较方便的去查阅我的笔记文件咯。
+==最近发现这个callout非常的好看==
+[Callouts - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
 
-其他同步方案，待查阅
+>[!info] info
 
+>[!example] example
 
-# **6. 不同显示器缩放问题**
-1. ctrl + 键盘的加号和减号（横排数字键边上的两个）
-2. ctrl + 鼠标滚轮（设置里的外观调整要把鼠标滚轮可以调开关打开）
+>[!bug] bug
 
 
-# **7. 如何移植所有配置**
+# **5. 如何移植所有配置**
 [bomblebear/obsidian_config](https://github.com/bomblebear/obsidian_config)
 
 1. 只需要将`.obsidian`文件夹整个复制到新的仓库即可，里面会包含所有已经设置好插件及配置；
 2. 由于我使用了自己的字体配置，所以加入了一个`font`文件夹，将字体文件安装到本地即可删除；不希望使用该字体的可以分别改成**微软雅黑**和**consolas**；
 3. 设置中开启`commutiy plugins`
 4. 为了可以使用`ctrl`+鼠标滚轮进行缩放，设置中`appearance`打开`quick font size adjustment`
+
 
 
