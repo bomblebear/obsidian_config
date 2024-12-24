@@ -186,7 +186,7 @@ img {
 - https://bubblebear.notion.site/
 用Dataview & DB Folder进行补偿方案，但是这个数据库列表有点丑，所以暂时先不用，后面再说吧.
 
-简单语法例如：
+还有一些简单语法例如：
  + 今天是  **`=dateformat(date(today)," yyyy 年 M 月 d 日")`** 
  + 距离2025年除夕还有 **`= round((date(2025-01-28) - date(now)).days)`** 天
 配合callout
@@ -224,10 +224,26 @@ img {
 2. 因为他的绘图文件格式是`md`文件，这样会造成一个问题，导致`clear unused image`无法对其完成清理，目前我不知道怎么解决；
 3. 正是因为上面这个问题，所以为了便于清理，我没办法把这个绘图文件放在对应`md`文件的`attachments`文件夹中（违背了我的原则😭），把`Basic`设置中的，`Use Excalidraw folder when embedding ...`打开了，放在了一个统一的根目录下的文件夹内；
 
+## 2.10 📥Better Export PDF
 
+主要是借用他的导出pdf带书签功能，原生的导出不带书签，命令为：
+- `ctrl + P`
+- `Better Export PDF: Export current file to PDF`
+
+但是我试了他选项里面的margin，还是没有办法进行正确的修改，最后在css样式文件中加入了：
+```css
+@media print {
+    /* 页边距 */
+    @page {
+        margin: 15mm 20mm 15mm 20mm; /* 上 右 下 左 */
+    }
+}
+```
+
+导出PDF有很多格式不太完美，另外Emoji也显示不全，暂时就这样吧😭
 # **3. Markdown**
 + [MarkDown语法 超详细教程 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/435)
-
+## 3.1 基本语法
 大部分其实我都知道了，把之前不熟悉的列举一下：
 
 + 文本加粗：`ctrl + B`
@@ -262,6 +278,7 @@ img {
 
 + 转义字符，前面加 `\`
 
+## 3.2 多媒体嵌入
 + **嵌入音频**
 ```
 <audio controls="controls" preload="none" src="https://www.ldoceonline.com/media/english/exaProns/p008-001803372.mp3?version=1.2.30"></audio>
@@ -278,7 +295,7 @@ img {
 ```
 - **Video标签** 支持的视频格式 ：`mp4`, `ogg`, `webm`
 
-
+## 3.3 脚注
 + **脚注`[^3]`**
 H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以这么做]入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。 [^1] 比如这是一个简单的脚注，[^1] 这是一个长一些的脚注。[^长脚注] 
 
@@ -286,16 +303,17 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 [^长脚注]:不在乎你的注释是什么，阅读模式下会自动编号
 
 # **4. Obsidian 功能**
+[Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)
+
 > [!Title] 使用原则
 > + 为了保证可迁移性，尽量去使用原生的Markdown语法；
 > + 尽量避免使用wikilink等Obsidian特有语法；
 > + 使用`Consistent Attachments and Links: Replace All Wiki Links with Markdown Links`进行转换；
 > + 这个callout模块就不是原生语法；
-+ [由此开始 - Obsidian 中文帮助 - Obsidian Publish](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B)
 
-==Command Palette==
+## 4.1 Command Palette
 `Ctrl + P`
-==双链笔记&Tag==
+## 4.2 双链笔记 & Tag
 ```
 链接到某一篇笔记：[[ ]]
 
@@ -317,11 +335,13 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 #Obsidian
 这样，就能检索所有出现这个关键词的文件了
 
-==Quick Switcher==
+## 4.3 Quick Switcher
 
 `Ctrl + O`即可快速切换笔记
 
-==最近发现这个callout非常的好看==
+## 4.4 Callout
+最近发现这个callout非常的好看
+
 [Callouts - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
 
 >[!info] info

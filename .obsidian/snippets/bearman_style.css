@@ -32,6 +32,16 @@ img {
 }
 
 
+/* 编辑模式下脚注颜色 */
+.cm-s-obsidian span.cm-footref.cm-hmd-barelink, .cm-s-obsidian span.cm-blockid {
+    color: purple;
+}
+/* 编辑模式下脚注列表颜色 */
+.cm-s-obsidian .cm-line.HyperMD-footnote span.cm-hmd-footnote .cm-underline {
+    color: purple;
+    text-decoration: none;
+}
+
 
 /* 定义加粗字体颜色 */
 .cm-strong, b, strong{
@@ -186,3 +196,12 @@ ol > li::marker, ul > li::marker {
 }
   
 
+/* 转pdf的margin */
+@media print {
+
+	/* 页边距 */
+    @page {
+        margin: 15mm 20mm 15mm 20mm; /* 上 右 下 左 */
+    }
+    
+}
