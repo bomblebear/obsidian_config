@@ -224,7 +224,7 @@ img {
 2. 因为他的绘图文件格式是`md`文件，这样会造成一个问题，导致`clear unused image`无法对其完成清理，目前我不知道怎么解决；
 3. 正是因为上面这个问题，所以为了便于清理，我没办法把这个绘图文件放在对应`md`文件的`attachments`文件夹中（违背了我的原则😭），把`Basic`设置中的，`Use Excalidraw folder when embedding ...`打开了，放在了一个统一的根目录下的文件夹内；
 
-## 2.10 📥Better Export PDF
+### 2.10 📥Better Export PDF
 
 主要是借用他的导出pdf带书签功能，原生的导出不带书签，命令为：
 - `ctrl + P`
@@ -243,7 +243,7 @@ img {
 导出PDF有很多格式不太完美，另外Emoji也显示不全，暂时就这样吧😭
 # **3. Markdown**
 + [MarkDown语法 超详细教程 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/435)
-## 3.1 基本语法
+### 3.1 基本语法
 大部分其实我都知道了，把之前不熟悉的列举一下：
 
 + 文本加粗：`ctrl + B`
@@ -278,7 +278,7 @@ img {
 
 + 转义字符，前面加 `\`
 
-## 3.2 多媒体嵌入
+### 3.2 多媒体嵌入
 + **嵌入音频**
 ```
 <audio controls="controls" preload="none" src="https://www.ldoceonline.com/media/english/exaProns/p008-001803372.mp3?version=1.2.30"></audio>
@@ -295,7 +295,7 @@ img {
 ```
 - **Video标签** 支持的视频格式 ：`mp4`, `ogg`, `webm`
 
-## 3.3 脚注
+### 3.3 脚注
 + **脚注`[^3]`**
 H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以这么做]入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。 [^1] 比如这是一个简单的脚注，[^1] 这是一个长一些的脚注。[^长脚注] 
 
@@ -311,9 +311,9 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 > + 使用`Consistent Attachments and Links: Replace All Wiki Links with Markdown Links`进行转换；
 > + 这个callout模块就不是原生语法；
 
-## 4.1 Command Palette
+### 4.1 Command Palette
 `Ctrl + P`
-## 4.2 双链笔记 & Tag
+### 4.2 双链笔记 & Tag
 ```
 链接到某一篇笔记：[[ ]]
 
@@ -335,11 +335,11 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 #Obsidian
 这样，就能检索所有出现这个关键词的文件了
 
-## 4.3 Quick Switcher
+### 4.3 Quick Switcher
 
 `Ctrl + O`即可快速切换笔记
 
-## 4.4 Callout
+### 4.4 Callout
 最近发现这个callout非常的好看
 
 [Callouts - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
