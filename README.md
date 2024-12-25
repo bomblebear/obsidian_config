@@ -224,23 +224,6 @@ img {
 2. 因为他的绘图文件格式是`md`文件，这样会造成一个问题，导致`clear unused image`无法对其完成清理，目前我不知道怎么解决；
 3. 正是因为上面这个问题，所以为了便于清理，我没办法把这个绘图文件放在对应`md`文件的`attachments`文件夹中（违背了我的原则😭），把`Basic`设置中的，`Use Excalidraw folder when embedding ...`打开了，放在了一个统一的根目录下的文件夹内；
 
-### 2.10 📥Better Export PDF
-
-主要是借用他的导出pdf带书签功能，原生的导出不带书签，命令为：
-- `ctrl + P`
-- `Better Export PDF: Export current file to PDF`
-
-但是我试了他选项里面的margin，还是没有办法进行正确的修改，最后在css样式文件中加入了：
-```css
-@media print {
-    /* 页边距 */
-    @page {
-        margin: 15mm 20mm 15mm 20mm; /* 上 右 下 左 */
-    }
-}
-```
-
-导出PDF有很多格式不太完美，另外Emoji也显示不全，暂时就这样吧😭
 # **3. Markdown**
 + [MarkDown语法 超详细教程 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/435)
 ### 3.1 基本语法
@@ -303,8 +286,8 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 [^长脚注]:不在乎你的注释是什么，阅读模式下会自动编号
 
 # **4. Obsidian 功能**
-[Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)
-
+1. [Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)
+2. [How Obsidian stores data - Obsidian Help](https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data)
 > [!Title] 使用原则
 > + 为了保证可迁移性，尽量去使用原生的Markdown语法；
 > + 尽量避免使用wikilink等Obsidian特有语法；
@@ -352,6 +335,7 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 
 
 # **5. 如何移植所有配置**
+
 [bomblebear/obsidian_config](https://github.com/bomblebear/obsidian_config)
 
 1. 只需要将`.obsidian`文件夹整个复制到新的仓库即可，里面会包含所有已经设置好插件及配置；
