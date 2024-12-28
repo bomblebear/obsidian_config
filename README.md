@@ -3,130 +3,18 @@ Obsidian中提供了非常多的主题，但是作为强迫整患者，最合适
 
 Obsidian中渲染包含两种格式，编辑模式使用 CodeMirror 编辑器，而阅读模式则使用渲染后的 Markdown 预览。所以要注意区分一下，这两者对应的元素名称并不相同
 
-按 `Ctrl + Shift + I` ，打开开发者工具，点击窗口左上角的**选择网页中的相应元素即可进行检查**，回到 Obsidian 的窗口，此时鼠标移动至任何地方都会有高亮突出显示。
+>按 `Ctrl + Shift + I` ，打开开发者工具，点击窗口左上角的选择网页中的相应元素即可进行检查，回到 Obsidian 的窗口，此时鼠标移动至任何地方都会有高亮突出显示。然后戳对应的元素，就能看到对应的elements的配置信息了，照这个葫芦来画。将保存的css文件放置在 `.obsidian/snippets/` 内，然后在设置中启用CSS代码片段即可.
 
-然后戳对应的元素，就能看到对应的elements的配置信息了，照这个葫芦来画，然后将保存的css文件放置在 `.obsidian/snippets/` 内，然后在设置中启用CSS代码片段即可
+我的样式文件是`.obsidian/snippets/bearman_style.css`。
+
+大部分内容是各种格式的颜色和行间距，另外还包括：
+1. 图片居中
+2. 表格居中
+3. 导出pdf的页边距(margin)设置
+
 
 + 字体套用思源黑体 `Source Han Sans CN VF` 
 + 代码字体(mono)使用 `Ubuntu Mono` 
-
-#### 一个例子**obsidian.css**
-```css
-/* obsidian.css */
-
-/* 定义图片居中 */
-img {
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-}
-    
- .markdown-source-view.mod-cm6 .cm-content > * {
-        margin: auto auto !important;
-}
-
-
-/* 定义行内代码的颜色 */
-.cm-s-obsidian span.cm-inline-code
-{
-    color: purple;   
-    font-size: 0.95em; /* 相对于父元素的字体大小 */
-}
-
-
-/* 定义加粗字体颜色 */
-.cm-strong, b, strong{
-  color: #3498db; /* 这里是深蓝色的示例 */
-  font-weight: 800;
-}
-
-/* 定义斜体颜色 */
-.cm-em, i, em {
-    color: #3498db; /* 这里是深蓝色的示例 */
-}
-
-
-/* 下面是1234级标题 */
-
-.HyperMD-header-1, .inline-title[data-level='1'], .HyperMD-list-line .cm-header-1 {
-
-    color:  ;
-    line-height: 2.7; /* 行间距为2倍 */
-    font-weight: 540
-
-}
-
-.HyperMD-header-2, .inline-title[data-level='2'], .HyperMD-list-line .cm-header-2 {
-
-    color: ;
-    line-height: 2.3; /* 行间距为1.7倍 */
-    font-weight: 540
-
-}
-
-.HyperMD-header-3, .inline-title[data-level='3'], .HyperMD-list-line .cm-header-3 {
-
-    color: ;
-    line-height: 2.0; /* 行间距为1.5倍 */
-    font-weight: 530
-
-}
-
-.HyperMD-header-4, .inline-title[data-level='4'], .HyperMD-list-line .cm-header-4 {
-
-    color: ;
-    line-height: 1.9; /* 行间距为1.5倍 */
-    font-weight: 530
-
-}
-
-
-
-/* 强调的字体 ==这是强调字体==，17px */
-
-.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .markdown-rendered mark
-{
-    background-color: ;
-    color: ;
-    line-height: 2.2; /* 行间距为2倍 */
-    font-size: 1.25em; /* 相对于父元素的字体大小 */
-    font-weight: bold; /* 加粗 */
-}
-
-
-/* 调整正文行间距 */
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
-.markdown-rendered p
-{
-    line-height: 1.6; /* 行间距为1.5倍 */
-}
-
-
-/* 给超链接格式添加一个背景色 */
-.markdown-source-view.mod-cm6 .cm-link .cm-underline,
-.markdown-source-view.mod-cm6 .cm-url .cm-underline, .external-link {
-    background-color: #f2f2f2; /* 淡灰色的背景色 */
-    padding: ; /* 可以根据需要添加内边距 2px */
-}
-
-
-
-/* 引用文字减小大小 */
-.cm-s-obsidian span.cm-quote.cm-quote-1
-{
-    font-size: 0.85em; /* 相对于父元素的字体大小 */
-}
-
-
-/* 角注颜色 */
-.cm-s-obsidian span.cm-footref
-{
-
-    color:purple;
-
-}
-
-```
 
 
 # **2. Obsidian Plugins**
@@ -150,34 +38,19 @@ Obsidian的wikilink虽然好用简单，但是不具备通用性，但是完全�
 ==Convert All Link Paths to Relative==
 Obsdian的文件索引完全不需要相对路径（无论是wikilink还是markdown原生的link），虽然在软件内没什么问题，但是如果移植就会不知道文件在哪里了
 ### 2.3 📁Clear Unused Images
-+ `Clear Unused Images and Attachments`
++ `Clear Unused Images
 markdown引用的图片和文件，如果你把md文件删除，附件其实还没有删除掉；
-本着强迫症的原则，必须解决😡
+本着强迫症的原则，必须解决😡.
+🚨注意，由于会删除所有没有在md文件中引用过的附件，所以最好不要使用`clear Unused Attachments`，因为可能会把我附在仓库里的字体文件删除（没有任何md文件引用）
 ### 2.4 🖼️Local Image Plus
 用于从网页复制粘贴文件时，可以自动下载贴图到对应的附件文件夹。
-否则直接复制可能就会出现图片无法解析的现象
+否则直接复制的话，Obsidian插入的链接还是网页中的图片地址
 ### 2.5 🖼️Paste image rename
 直接复制剪贴板的图片进Obsidian的笔记里，命名的方式全是 `paste***`+一堆数字，该插件可以自动或者手动修改名称；
 `auto rename`
 ### 2.6 🖼️Mousewheel Image Zoom
 原生的markdown修改图片大小太麻烦了，需要手动修改高度长度信息
-此插件可以通过快捷键 `alt + +/-`完成大小修改
-==💡那有同学就要问了，怎么居中呢？==
-同样，原生的markdown修改居中的办法这里居然用不了，麻烦的方式是使用html的标记语言，但是这也太逆天了，慢到死，手打一堆什么 `align = center`啥啥啥的，最直接的办法去Obsidian设置里修改CSS样式，来直接改变显示设置，把下面的代码存成`.css`格式放在`Obsidian\.obsidian\snippets`路径下，再在设置里面启用即可（**这里的代码一并放置在了前面的css样式中了，不需要另外再弄了**）
-
-```css
-img {
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-}
-    
- .markdown-source-view.mod-cm6 .cm-content > * {
-        margin: auto auto !important;
-}
-```
-
-
+此插件可以通过快捷键 `alt` + `+/-`完成大小修改
 
 ### 2.7 💡Dataview & DB Folder
 >[blacksmithgu/obsidian-dataview: A data index and query language over Markdown files, for https://obsidian.md/.](https://github.com/blacksmithgu/obsidian-dataview)
@@ -214,7 +87,9 @@ img {
 | me   | 18  |
 |      |     |
 
-也可以在 `Ctrl + P`在命令面板操作
+也可以在 `Ctrl + P`在命令面板操作。
+
+不咋用，但留着
 
 ### 2.9 🎨Excalidraw
 [zsviczian/obsidian-excalidraw-plugin: A plugin to edit and view Excalidraw drawings in Obsidian](https://github.com/zsviczian/obsidian-excalidraw-plugin)
@@ -225,7 +100,7 @@ img {
 3. 正是因为上面这个问题，所以为了便于清理，我没办法把这个绘图文件放在对应`md`文件的`attachments`文件夹中（违背了我的原则😭），把`Basic`设置中的，`Use Excalidraw folder when embedding ...`打开了，放在了一个统一的根目录下的文件夹内；
 
 # **3. Markdown**
-+ [MarkDown语法 超详细教程 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/435)
++ [Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)
 ### 3.1 基本语法
 大部分其实我都知道了，把之前不熟悉的列举一下：
 
@@ -262,6 +137,13 @@ img {
 + 转义字符，前面加 `\`
 
 ### 3.2 多媒体嵌入
+- 嵌入网页
+<iframe 
+    src="https://help.obsidian.md/Editing+and+formatting/Embed+web+pages" 
+    style="width: 100%; height: 300px; border: none;">
+</iframe>
+
+
 + **嵌入音频**
 ```
 <audio controls="controls" preload="none" src="https://www.ldoceonline.com/media/english/exaProns/p008-001803372.mp3?version=1.2.30"></audio>
@@ -286,8 +168,7 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 [^长脚注]:不在乎你的注释是什么，阅读模式下会自动编号
 
 # **4. Obsidian 功能**
-1. [Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)
-2. [How Obsidian stores data - Obsidian Help](https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data)
+- [Basic formatting syntax - Obsidian Help](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax)
 > [!Title] 使用原则
 > + 为了保证可迁移性，尽量去使用原生的Markdown语法；
 > + 尽量避免使用wikilink等Obsidian特有语法；
@@ -332,6 +213,16 @@ H脚注的用法很简单[^1]  ，只需要在段落中需要插[^其实可以�
 >[!example] example
 
 >[!bug] bug
+
+### 4.5 How obsidian store data
+[How Obsidian stores data - Obsidian Help](https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data)
+
+Obsidian 会在仓库的根文件夹中创建一个 `.obsidian` 配置文件夹，该文件夹包含与该仓库相关的特定偏好设置，例如快捷键、主题和社区插件。
+
+默认情况下，大多数操作系统会隐藏以`.`开头的文件夹，因此你可能需要更改文件管理器的设置才能看到它。
+
+> [!tip] Title
+> `.obsidian/workspace` 文件存储当前的工作区布局，每次打开新文件时都会发生更改。如果你使用 Git对仓库进行版本控制，可能需要将 `.obsidian/workspace` 文件添加到 `.gitignore` 中。(我暂时没管，一股脑放进去了)
 
 
 # **5. 如何移植所有配置**
