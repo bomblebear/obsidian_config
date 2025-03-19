@@ -14,6 +14,13 @@ Obsidian中渲染包含两种格式，编辑模式使用 CodeMirror 编辑器，
 
 + 字体套用思源黑体 `Source Han Sans CN VF` 
 + 代码字体(mono)使用 `Ubuntu Mono` 
+
+🚨(这里全部引用一遍是为了防止调用`clear unused images`将这些文件误删)
+> [SourceHanSansCN-VF](Miscellaneous/font/SourceHan/SourceHanSansCN-VF.ttf),  [SourceHanSerifCN-VF](Miscellaneous/font/SourceHan/SourceHanSerifCN-VF.ttf)
+> [UbuntuMono-R](Miscellaneous/font/ubuntu-font-family-0.83/UbuntuMono-R.ttf),  [UbuntuMono-B](Miscellaneous/font/ubuntu-font-family-0.83/UbuntuMono-B.ttf),  [UbuntuMono-RI](Miscellaneous/font/ubuntu-font-family-0.83/UbuntuMono-RI.ttf),  [UbuntuMono-BI](Miscellaneous/font/ubuntu-font-family-0.83/UbuntuMono-BI.ttf)
+> [Ubuntu-R](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-R.ttf), [Ubuntu-M](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-M.ttf), [Ubuntu-L](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-L.ttf), [Ubuntu-C](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-C.ttf), [Ubuntu-B](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-B.ttf), [Ubuntu-Th](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-Th.ttf), [Ubuntu-RI](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-RI.ttf), [Ubuntu-MI](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-MI.ttf), [Ubuntu-LI](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-LI.ttf), [Ubuntu-BI](Miscellaneous/font/ubuntu-font-family-0.83/Ubuntu-BI.ttf)
+> [CONTRIBUTING](Miscellaneous/font/ubuntu-font-family-0.83/CONTRIBUTING.txt), [copyright](Miscellaneous/font/ubuntu-font-family-0.83/copyright.txt), [FONTLOG](Miscellaneous/font/ubuntu-font-family-0.83/FONTLOG.txt), [LICENCE](Miscellaneous/font/ubuntu-font-family-0.83/LICENCE.txt), [LICENCE-FAQ](Miscellaneous/font/ubuntu-font-family-0.83/LICENCE-FAQ.txt), [README](Miscellaneous/font/ubuntu-font-family-0.83/README.txt), [[Miscellaneous/font/ubuntu-font-family-0.83/TRADEMARKS.txt|TRADEMARKS]]
+
 # **2. Obsidian Plugins**
 ==需要的插件/逐渐更新中...==
 ## 2.1 😆Emoji Toolbar
@@ -232,7 +239,6 @@ Ob会定义保存文件的快照(Snapshots)，这部分快照就保存在系统�
 2. 由于我使用了自己的字体配置，所以加入了一个`font`文件夹，将字体文件安装到本地即可删除；不希望使用该字体的可以分别改成**微软雅黑**和**consolas**；
 3. 设置中开启`commutiy plugins`
 4. 为了可以使用`ctrl`+鼠标滚轮进行缩放，设置中`appearance`打开`quick font size adjustment`
-
 
 
 
