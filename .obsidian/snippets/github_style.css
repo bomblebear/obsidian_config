@@ -1,0 +1,1416 @@
+/*
+  Bearman Obsidian Style
+  Based on GitHub Markdown defaults + custom features
+  ================================================
+  Sections:
+    1. CSS Variables
+    2. Base Typography & Paragraphs
+    3. Headings
+    4. Lists
+    5. Blockquotes
+    6. Code (inline & blocks)
+    7. Tables
+    8. Links
+    9. Horizontal Rules
+   10. Task Lists
+   11. Footnotes
+   12. Media & Embeds
+   13. Obsidian UI (callouts, tags, outline, etc.)
+   14. Custom Features (dropcap, head numbering, etc.)
+   15. Responsive Font Sizes
+   16. Dark Mode
+   17. Print Styles
+*/
+
+/* ================================================
+   1. CSS Variables
+   ================================================ */
+
+:root {
+  /* Background */
+  --bg-dark-mode: #0d1117;
+  --bg-light-mode: #fffdf6;
+  --bg-code-light: #f0f1f3;
+  --bg-code-dark: #1c2028;
+  --bg-callout-light: #f6f8fa;
+  --bg-callout-dark: #161b22;
+
+  /* Text */
+  --text-primary-dark: #c9d1d9;
+  --text-muted-dark: #768390;
+  --text-primary-light: #32383f;
+  --text-muted-light: #656d76;
+
+  /* Links */
+  --link-color-light: #529cca;
+  --link-color-dark: #4493f8;
+  --link-hover-light: #27598c;
+  --link-hover-dark: #8dc3f5;
+  --link-is-unresolved-light: #cf222e;
+  --link-is-unresolved-dark: #da3633;
+  --link-is-unresolved-hover-dark: #f85149;
+
+  /* Headings */
+  --heading-decor-color-light: #3b5998;
+  --heading-decor-color-dark: #58a6ff;
+  --heading-decor-gradient-light: linear-gradient(
+    135deg, #3b5998 0%, #529cca 50%, #5f9ea0 100%
+  );
+  --heading-decor-gradient-dark: linear-gradient(
+    135deg, #58a6ff 0%, #3fb950 50%, #a371f7 100%
+  );
+
+  /* HR */
+  --hr-gradient-light: linear-gradient(
+    90deg, transparent 0%, #3b5998 15%, #529cca 45%, #5f9ea0 55%, #7eb880 85%, transparent 100%
+  );
+  --hr-gradient-dark: linear-gradient(
+    90deg, transparent 0%, #58a6ff 15%, #3fb950 45%, #a371f7 55%, #f778ba 85%, transparent 100%
+  );
+
+  /* Table */
+  --table-border-light: #d0d7de;
+  --table-border-dark: #30363d;
+  --table-stripe-dark: #161b22;
+  --table-stripe-light: #f6f8fa;
+
+  /* Blockquote */
+  --blockquote-border-light: #d0d7de;
+  --blockquote-border-dark: #3b4957;
+  --blockquote-bg-light: #f6f8fa;
+
+  /* Misc */
+  --tag-bg-light: #ddf4ff;
+  --tag-bg-dark: #388bfd26;
+  --tag-text-light: #0969da;
+  --tag-text-dark: #58a6ff;
+  --shadow-color: #d0d7de;
+
+  /* Dropcap Settings */
+  --drop-cap-lines: 3.1;
+  --drop-cap-font-family: inherit;
+  --drop-cap-text-transform: normal;
+  --drop-cap-margin-right: 0.15em;
+  --drop-cap-color-light: #2d5f8a;
+  --drop-cap-color-dark: #58a6ff;
+  --drop-cap-opacity: 1;
+  --drop-cap-font-weight: 700;
+
+  /* Dropcap Component */
+  --dc-color: var(--drop-cap-color-light);
+  --dc-initial-size: 3.6em;
+  --dc-initial-line-height: 0.8;
+  --dc-initial-font-size: 1em;
+  --dc-initial-margin-right: 0;
+  --dc-initial-margin-bottom: 0;
+  --dc-initial-font-weight: var(--drop-cap-font-weight);
+  --dc-initial-font-family: var(--drop-cap-font-family);
+  --dc-initial-text-transform: var(--drop-cap-text-transform);
+  --dc-initial-opacity: var(--drop-cap-opacity);
+  --dc-initial-color: var(--dc-color);
+  --dc-subsequent-size: 1.45em;
+  --dc-subsequent-letter-spacing: 0.05em;
+  --dc-subsequent-word-spacing: 0.05em;
+  --dc-initial-content: normal;
+  --dc-subsequent-content: normal;
+}
+
+/* Obsidian UI misc */
+.nav-header .clickable-icon {
+  padding: 0.6em !important;
+}
+.nav-header .clickable-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.nav-header .clickable-icon svg + svg {
+  margin-left: -0.5em;
+}
+.suggestion-input-link-icon svg {
+  padding: 0 !important;
+}
+div.markdown-source-view .CodeMirror-activeline-background,
+div.markdown-source-view .CodeMirror-activeline-background.CodeMirror-linebackground {
+  background: #4747474f;
+}
+
+/* ================================================
+   2. Base Typography & Paragraphs
+   ================================================ */
+
+.markdown-preview-view {
+  color: var(--text-primary-light);
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+  text-justify: auto;
+  hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 2;
+  hyphenate-limit-chars: 6 3 2;
+  hanging-punctuation: allow-end;
+}
+
+.markdown-preview-view p {
+  margin: 0 0 1em 0;
+  line-height: 1.5;
+}
+
+.markdown-source-view {
+  text-align: justify;
+  text-justify: auto;
+  hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 2;
+  hyphenate-limit-chars: 6 3 2;
+  hanging-punctuation: allow-end;
+  --code-background: var(--bg-code-light);
+  /* Override Obsidian link theme variables */
+  --link-color: var(--link-color-light);
+  --link-unresolved-color: var(--link-is-unresolved-light);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+}
+.theme-dark .markdown-source-view {
+  --code-background: var(--bg-code-dark);
+  --link-color: var(--link-color-dark);
+  --link-unresolved-color: var(--link-is-unresolved-dark);
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+.markdown-rendered p {
+  line-height: 1.6;
+}
+
+/* ================================================
+   3. Headings
+   ================================================ */
+
+/* Preview headings */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  color: var(--text-primary-light);
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  padding-top: 0;
+  border: none;
+  clear: both;
+}
+
+/* Editor headings: CM6 lines don't support margin, use padding for spacing */
+.markdown-source-view .HyperMD-header-1,
+.markdown-source-view .HyperMD-header-2,
+.markdown-source-view .HyperMD-header-3,
+.markdown-source-view .HyperMD-header-4,
+.markdown-source-view .HyperMD-header-5,
+.markdown-source-view .HyperMD-header-6,
+.markdown-source-view .inline-title[data-level='1'],
+.markdown-source-view .inline-title[data-level='2'],
+.markdown-source-view .inline-title[data-level='3'],
+.markdown-source-view .inline-title[data-level='4'],
+.markdown-source-view .inline-title[data-level='5'],
+.markdown-source-view .inline-title[data-level='6'] {
+  color: var(--text-primary-light);
+  font-weight: 600;
+}
+
+.markdown-source-view .HyperMD-header-1,
+.markdown-source-view .inline-title[data-level='1'],
+.markdown-source-view .HyperMD-list-line .cm-header-1 {
+  line-height: 2.7;
+  font-weight: 540;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+}
+.markdown-source-view .HyperMD-header-2,
+.markdown-source-view .inline-title[data-level='2'],
+.markdown-source-view .HyperMD-list-line .cm-header-2 {
+  line-height: 2.3;
+  font-weight: 540;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+}
+.markdown-source-view .HyperMD-header-3,
+.markdown-source-view .inline-title[data-level='3'],
+.markdown-source-view .HyperMD-list-line .cm-header-3 {
+  line-height: 2.0;
+  font-weight: 530;
+  padding-top: 1.5em;
+  padding-bottom: 0.3em;
+}
+.markdown-source-view .HyperMD-header-4,
+.markdown-source-view .inline-title[data-level='4'],
+.markdown-source-view .HyperMD-list-line .cm-header-4 {
+  line-height: 1.9;
+  font-weight: 530;
+  padding-top: 1.5em;
+  padding-bottom: 0.3em;
+}
+
+/* Font sizes */
+.markdown-preview-view h1,
+.markdown-source-view h1,
+.markdown-source-view .HyperMD-header-1,
+.markdown-source-view .inline-title[data-level='1'] { font-size: 2em; }
+.markdown-preview-view h2,
+.markdown-source-view h2,
+.markdown-source-view .HyperMD-header-2,
+.markdown-source-view .inline-title[data-level='2'] { font-size: 1.5em; }
+.markdown-preview-view h3,
+.markdown-source-view h3,
+.markdown-source-view .HyperMD-header-3,
+.markdown-source-view .inline-title[data-level='3'] { font-size: 1.25em; }
+.markdown-preview-view h4,
+.markdown-source-view h4,
+.markdown-source-view .HyperMD-header-4,
+.markdown-source-view .inline-title[data-level='4'] { font-size: 1em; }
+.markdown-preview-view h5,
+.markdown-source-view h5,
+.markdown-source-view .HyperMD-header-5,
+.markdown-source-view .inline-title[data-level='5'] { font-size: 0.875em; }
+.markdown-preview-view h6,
+.markdown-source-view h6,
+.markdown-source-view .HyperMD-header-6,
+.markdown-source-view .inline-title[data-level='6'] { font-size: 0.85em; }
+
+/* h1 & h2 bottom border */
+.markdown-preview-view h1,
+.markdown-source-view .HyperMD-header-1 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--table-border-light);
+}
+.markdown-preview-view h2,
+.markdown-source-view .HyperMD-header-2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--table-border-light);
+}
+
+/* H4 left-border decoration (preview only) */
+.markdown-preview-view h4 {
+  border-left: 4px solid var(--heading-decor-color-light);
+  padding-left: 12px;
+  margin-top: 2em;
+}
+.markdown-preview-view h4 .heading-anchor {
+  margin-left: -1em;
+}
+
+/* ================================================
+   4. Lists
+   ================================================ */
+
+.markdown-preview-view ol,
+.markdown-preview-view ul,
+.markdown-source-view ol,
+.markdown-source-view ul {
+  padding-left: 0.6em;
+  margin: 0 0 1em 0;
+}
+
+.markdown-preview-view li,
+.markdown-source-view li {
+  margin-top: 0.25em;
+}
+.markdown-preview-view li + li,
+.markdown-source-view li + li {
+  margin-top: 0.25em;
+}
+
+.markdown-preview-view ol ol,
+.markdown-preview-view ol ul,
+.markdown-preview-view ul ol,
+.markdown-preview-view ul ul,
+.markdown-source-view ol ol,
+.markdown-source-view ol ul,
+.markdown-source-view ul ol,
+.markdown-source-view ul ul {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+
+.markdown-preview-view ul,
+.markdown-source-view ul { list-style-type: disc; }
+.markdown-preview-view ul ul,
+.markdown-source-view ul ul { list-style-type: circle; }
+.markdown-preview-view ul ul ul,
+.markdown-source-view ul ul ul { list-style-type: square; }
+
+.markdown-preview-view ol,
+.markdown-source-view ol { list-style-type: decimal; }
+
+.markdown-preview-view li::marker,
+.markdown-source-view li::marker {
+  color: var(--text-muted-light);
+}
+
+/* ================================================
+   5. Blockquotes
+   ================================================ */
+
+.markdown-preview-view blockquote,
+.markdown-source-view blockquote,
+.markdown-source-view .HyperMD-quote {
+  border-left: 3px solid var(--blockquote-border-light) !important;
+  padding: 0 1em;
+  margin: 1em 0;
+  color: var(--text-muted-light);
+}
+
+/* Obsidian CM6 injects a purple border via --blockquote-border; override with box-shadow */
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+  --blockquote-border: transparent !important;
+  border-left: none !important;
+  box-shadow: inset 3px 0 0 0 var(--blockquote-border-light) !important;
+  outline: none !important;
+}
+.markdown-source-view.mod-cm6 .HyperMD-quote::before {
+  display: none !important;
+  content: none !important;
+}
+
+.markdown-preview-view blockquote blockquote,
+.markdown-source-view blockquote blockquote {
+  border-left: 3px solid var(--blockquote-border-light);
+  margin-top: 1em;
+}
+
+/* ================================================
+   6. Code (inline & blocks)
+   ================================================ */
+
+.markdown-preview-view code,
+.markdown-source-view code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.875em;
+  background-color: var(--bg-code-light);
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  color: var(--text-primary-light);
+}
+
+.markdown-source-view .cm-inline-code {
+  font-size: 0.875em;
+  background-color: var(--bg-code-light);
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  color: var(--text-primary-light);
+}
+
+.markdown-preview-view pre,
+.markdown-source-view pre {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85em;
+  background-color: var(--bg-code-light);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  color: var(--text-primary-light);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.45;
+  margin-bottom: 1.2em;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.markdown-preview-view pre code,
+.markdown-source-view pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  font-size: inherit;
+}
+
+/* Editor code block */
+.markdown-source-view .markdown-source-view .cm-preview-code-block,
+.markdown-source-view .markdown-source-view .cm-preview-code-block .highlight,
+.markdown-source-view .markdown-source-view .cm-preview-code-block .highlight pre,
+.markdown-source-view .markdown-source-view .cm-preview-code-block code,
+.markdown-source-view .markdown-source-view .HyperMD-codeblock,
+.markdown-source-view .markdown-source-view .HyperMD-codeblock-begin,
+.markdown-source-view .markdown-source-view .HyperMD-codeblock-end,
+.markdown-source-view .markdown-source-view .HyperMD-codeblock .cm-line {
+  background: var(--bg-code-light) !important;
+  --code-background: var(--bg-code-light) !important;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+.markdown-source-view .markdown-source-view .cm-preview-code-block {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  opacity: 1 !important;
+}
+
+/* Inline code in links */
+.markdown-preview-view .tag-list a code,
+.markdown-preview-view .markdown-rendered a code,
+.markdown-source-view .tag-list a code,
+.markdown-source-view .markdown-rendered a code {
+  font-size: 0.92em;
+  background-color: var(--bg-code-light);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  color: var(--text-primary-light);
+}
+
+/* ================================================
+   7. Tables
+   ================================================ */
+
+.markdown-preview-view table,
+.markdown-source-view table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1em;
+  width: auto;
+  border: 1px solid var(--table-border-light);
+  border-radius: 4px;
+  overflow: hidden;
+  display: table;
+  background-color: transparent;
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td,
+.markdown-source-view th,
+.markdown-source-view td {
+  padding: 6px 13px;
+  border: 1px solid var(--table-border-light);
+  text-align: left;
+  word-break: break-all;
+}
+
+.markdown-preview-view th,
+.markdown-source-view th {
+  font-weight: 600;
+}
+
+.markdown-preview-view tr:nth-child(2n),
+.markdown-source-view tr:nth-child(2n) {
+  background-color: var(--table-stripe-light);
+}
+
+.markdown-preview-view table.table-100,
+.markdown-source-view table.table-100 {
+  table-layout: auto;
+}
+
+/* ================================================
+   8. Links
+   ================================================ */
+
+/* Preview & editor <a> tags */
+.markdown-preview-view a,
+.markdown-source-view a {
+  color: var(--link-color-light);
+  text-decoration: none;
+}
+.markdown-preview-view a:hover,
+.markdown-preview-view a:focus-visible,
+.markdown-source-view a:hover,
+.markdown-source-view a:focus-visible {
+  background-color: #529cca17;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  outline: none;
+}
+.markdown-preview-view a:focus-visible,
+.markdown-source-view a:focus-visible {
+  outline: 2px solid #529cca7c;
+  border-radius: 2px;
+}
+.markdown-preview-view a.is-unresolved,
+.markdown-source-view a.is-unresolved {
+  color: var(--link-is-unresolved-light);
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.markdown-preview-view a.is-unresolved:hover,
+.markdown-source-view a.is-unresolved:hover {
+  text-decoration-style: solid;
+  background-color: #cf222e17;
+}
+.markdown-preview-view a.linkis-link,
+.markdown-source-view a.linkis-link {
+  font-weight: 500;
+}
+.markdown-preview-view a.linkis-link::after,
+.markdown-source-view a.linkis-link::after,
+.markdown-preview-view a.markdown-link::after,
+.markdown-source-view a.markdown-link::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.25em;
+  width: 11px;
+  height: 11px;
+  background: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  vertical-align: baseline;
+  position: relative;
+  top: 1px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' viewBox='0 0 24 24'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' viewBox='0 0 24 24'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* Editor CM6 link spans */
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link.cm-underline,
+.markdown-source-view.mod-cm6 .cm-link,
+.markdown-source-view.mod-cm6 .cm-link.cm-underline,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-source-view.mod-cm6 .cm-string.cm-url,
+.markdown-source-view.mod-cm6 span.cm-underline[draggable="true"] {
+  color: var(--link-color-light) !important;
+  text-decoration: none !important;
+  background-color: transparent !important;
+}
+.markdown-source-view .cm-hmd-internal-link.cm-link-alias-unresolved {
+  color: var(--link-is-unresolved-light) !important;
+}
+
+/* Header anchor visibility */
+.markdown-preview-view .heading-anchor {
+  display: none;
+  margin-left: 0.45em;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.markdown-preview-view .heading-anchor.is-heading-anchor-mode {
+  display: inline-block;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.markdown-preview-view h1:hover .heading-anchor,
+.markdown-preview-view h2:hover .heading-anchor,
+.markdown-preview-view h3:hover .heading-anchor,
+.markdown-preview-view h4:hover .heading-anchor,
+.markdown-preview-view h5:hover .heading-anchor,
+.markdown-preview-view h6:hover .heading-anchor,
+.markdown-preview-view .header.is-active .heading-anchor,
+.markdown-preview-view .heading-anchor.is-heading-anchor-mode:hover {
+  opacity: 0.8;
+}
+.markdown-preview-view .heading-anchor:hover {
+  text-decoration: none !important;
+}
+
+/* ================================================
+   9. Horizontal Rules
+   ================================================ */
+
+.markdown-preview-view hr,
+.markdown-source-view hr {
+  height: 0.25em;
+  border: none;
+  background: var(--hr-gradient-light);
+  margin: 2em 0 1em 0;
+}
+
+/* ================================================
+   10. Task Lists
+   ================================================ */
+
+.markdown-preview-view .task-list-item,
+.markdown-source-view .task-list-item {
+  list-style-type: none;
+  margin-left: -1.5em;
+  padding-left: 0;
+  text-indent: 0;
+  position: relative;
+}
+.markdown-preview-view .task-list-item-checkbox,
+.markdown-source-view .task-list-item-checkbox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  margin-right: 0.55em;
+  width: 14px;
+  height: 14px;
+  opacity: 0.65;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  background: none;
+  color: var(--text-muted-light);
+}
+.markdown-preview-view .task-list-item input[type="checkbox"],
+.markdown-source-view .task-list-item input[type="checkbox"] {
+  position: relative;
+  top: 3px;
+  margin-right: 0.55em;
+}
+.markdown-preview-view .task-list-item input[type="checkbox"]:checked,
+.markdown-source-view .task-list-item input[type="checkbox"]:checked {
+  accent-color: #529cca;
+}
+.markdown-preview-view .task-list-item input[type="checkbox"]:checked::before,
+.markdown-source-view .task-list-item input[type="checkbox"]:checked::before {
+  background: #529cca;
+  border-color: #529cca;
+}
+.markdown-preview-view .task-list-item.completed,
+.markdown-source-view .task-list-item.completed {
+  color: var(--text-muted-light);
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* ================================================
+   11. Footnotes
+   ================================================ */
+
+.markdown-preview-section .footnotes {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--table-border-light);
+  counter-reset: footnote-counter;
+}
+.markdown-preview-section .footnote-ref a,
+.markdown-preview-view .footnote-ref a,
+.markdown-source-view .footnote-ref a {
+  color: var(--link-color-light) !important;
+  text-decoration: none;
+}
+.markdown-preview-section .footnote-ref a:hover {
+  text-decoration: underline;
+}
+.markdown-preview-section sup.footnote-ref {
+  font-size: 0.8em;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 0.1em;
+}
+.markdown-preview-section sup.footnote-ref::before { content: "["; }
+.markdown-preview-section sup.footnote-ref::after  { content: "]"; }
+.markdown-preview-section sup.footnote-ref a:hover {
+  text-decoration: underline;
+}
+
+.markdown-rendered sup:not(:has(a)) {
+  display: inline-block;
+  font-size: 0.8em;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--text-muted-light);
+  margin: 0 0.05em;
+  padding: 0.05em 0.15em;
+  background-color: var(--tag-bg-light);
+  border-radius: 4px;
+}
+.markdown-rendered sup:not(:has(a)) a[href^="#fn"] {
+  display: inline-block;
+  font-size: 0.8em;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--text-muted-light);
+  margin: 0 0.05em;
+  padding: 0.05em 0.15em;
+  background-color: var(--tag-bg-light);
+  border-radius: 4px;
+}
+.markdown-rendered sup:not(:has(a)) a[href^="#fn"]::after {
+  content: none;
+}
+
+.markdown-preview-view .footnotes .footnote-item,
+.markdown-source-view .footnotes .footnote-item {
+  margin-bottom: 0.8em;
+  padding-left: 0.5em;
+  position: relative;
+}
+.markdown-preview-view .footnotes .footnote-item::before,
+.markdown-source-view .footnotes .footnote-item::before {
+  counter-increment: footnote-counter;
+  content: counter(footnote-counter) ". ";
+  font-size: 0.9em;
+  color: var(--text-muted-light);
+  font-weight: 500;
+}
+.markdown-preview-view .footnotes .footnote-item p,
+.markdown-source-view .footnotes .footnote-item p {
+  display: inline;
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: var(--text-primary-light);
+}
+.markdown-preview-view .footnotes .footnote-item .footnote-backref,
+.markdown-source-view .footnotes .footnote-item .footnote-backref {
+  color: var(--link-color-light);
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-left: 0.3em;
+}
+.markdown-preview-view .footnotes .footnote-item .footnote-backref:hover,
+.markdown-source-view .footnotes .footnote-item .footnote-backref:hover {
+  text-decoration: underline;
+}
+.markdown-preview-view .footnotes .footnote-item sup a,
+.markdown-source-view .footnotes .footnote-item sup a {
+  color: var(--link-color-light);
+  text-decoration: none;
+  margin-left: 0.1em;
+}
+.markdown-preview-view .footnotes .footnote-item sup a:hover,
+.markdown-source-view .footnotes .footnote-item sup a:hover {
+  text-decoration: underline;
+}
+.markdown-preview-view .footnotes hr,
+.markdown-source-view .footnotes hr {
+  display: none;
+}
+
+/* ================================================
+   12. Media & Embeds
+   ================================================ */
+
+img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.markdown-source-view.mod-cm6 .cm-content > * {
+  margin: auto auto !important;
+}
+.markdown-preview-view span.internal-embed,
+.markdown-source-view span.internal-embed {
+  display: block;
+  text-align: center;
+}
+.markdown-preview-view span.internal-embed.markdown-embed,
+.markdown-source-view span.internal-embed.markdown-embed {
+  display: block;
+}
+.markdown-preview-view .media-embed,
+.markdown-source-view .media-embed {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.markdown-preview-view .youtube-embed-wrapper,
+.markdown-preview-view .video-embed-wrapper,
+.markdown-source-view .youtube-embed-wrapper,
+.markdown-source-view .video-embed-wrapper {
+  margin: 1.5em auto;
+  max-width: 720px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.markdown-preview-view .video-embed-wrapper,
+.markdown-source-view .video-embed-wrapper {
+  position: relative;
+}
+.markdown-preview-view .video-embed-wrapper video,
+.markdown-source-view .video-embed-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+.markdown-preview-view .video-wrapper,
+.markdown-source-view .video-wrapper {
+  text-align: center;
+  margin: 1.5em 0;
+}
+.markdown-preview-view .external-embed,
+.markdown-source-view .external-embed {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+.markdown-preview-view iframe.markdown-embed[type="text/html"],
+.markdown-source-view iframe.markdown-embed[type="text/html"] {
+  max-width: 720px;
+  width: 100%;
+}
+
+/* ================================================
+   13. Obsidian UI
+   ================================================ */
+
+/* Callout Toggle Marker */
+.callout-title .callout-fold svg,
+.callout-title-inner .callout-fold svg {
+  display: none !important;
+}
+.callout-title .callout-fold,
+.callout-title-inner .callout-fold {
+  position: relative;
+}
+.callout-title .callout-fold::before,
+.callout-title-inner .callout-fold::before {
+  content: "▸";
+  display: inline-block;
+  font-size: 0.9em;
+  color: var(--text-muted-light);
+  transition: transform 0.2s ease, color 0.2s ease;
+  line-height: 1;
+  vertical-align: middle;
+}
+.callout-title .callout-fold.is-collapsed::before,
+.callout-title-inner .callout-fold.is-collapsed::before {
+  transform: rotate(0deg);
+}
+.callout-title .callout-fold:not(.is-collapsed)::before,
+.callout-title-inner .callout-fold:not(.is-collapsed)::before {
+  transform: rotate(90deg);
+}
+.callout-title .callout-fold:hover::before,
+.callout-title-inner .callout-fold:hover::before {
+  color: var(--text-primary-light);
+}
+
+/* Callout content */
+.callout-content {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.callout-content li {
+  margin-top: 0.1em;
+}
+.markdown-source-view .cm-embed-block .callout-content,
+.markdown-source-view .cm-embed-block .callout-content p,
+.markdown-source-view .cm-embed-block .callout-content li,
+.markdown-source-view .cm-embed-block .callout-content ol,
+.markdown-source-view .cm-embed-block .callout-content ul {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+/* Tags */
+.tag {
+  background-color: var(--tag-bg-light);
+  color: var(--tag-text-light);
+  font-size: 0.9em;
+  padding: 0 0.35em;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Outline (Table of Contents) */
+.outline-heading-link {
+  text-decoration: none;
+}
+.outline-heading-link:hover {
+  text-decoration: underline;
+  color: var(--link-hover-light);
+}
+
+/* YAML Frontmatter */
+.markdown-preview-view .frontmatter-container,
+.markdown-source-view .frontmatter-container {
+  font-size: 0.85em;
+  color: var(--text-muted-light);
+}
+
+/* ================================================
+   14. Custom Features
+   ================================================ */
+
+/* Dropcap */
+.markdown-preview-view p.has-dropcap.has-first-letter::first-letter {
+  float: left;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  font-family: var(--dc-initial-font-family);
+  font-size: var(--dc-initial-font-size);
+  font-weight: var(--dc-initial-font-weight);
+  font-style: normal;
+  line-height: var(--dc-initial-line-height);
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--dc-initial-color);
+  text-transform: var(--dc-initial-text-transform);
+  opacity: var(--dc-initial-opacity);
+}
+.markdown-preview-view p.has-dropcap.has-first-letter {
+  font-size: var(--dc-subsequent-size);
+  letter-spacing: var(--dc-subsequent-letter-spacing);
+  word-spacing: var(--dc-subsequent-word-spacing);
+}
+.markdown-preview-view.is-single-column p.has-dropcap.has-first-letter::first-letter,
+.is-single-column p.has-dropcap.has-first-letter::first-letter {
+  width: var(--dc-initial-size);
+  height: var(--dc-initial-size);
+  min-width: var(--dc-initial-size);
+  min-height: var(--dc-initial-size);
+  margin-right: var(--dc-margin-right);
+  margin-bottom: var(--dc-initial-margin-bottom);
+  font-size: 1em;
+}
+.markdown-preview-view.is-single-column p.has-dropcap.has-first-letter,
+.is-single-column p.has-dropcap.has-first-letter {
+  font-size: var(--dc-subsequent-size);
+  letter-spacing: var(--dc-subsequent-letter-spacing);
+  word-spacing: var(--dc-subsequent-word-spacing);
+}
+.markdown-preview-view.is-large-heading p.has-dropcap.has-first-letter::first-letter {
+  width: calc(var(--dc-initial-size) * 2);
+  height: calc(var(--dc-initial-size) * 2);
+  min-width: calc(var(--dc-initial-size) * 2);
+  min-height: calc(var(--dc-initial-size) * 2);
+  margin-right: var(--dc-margin-right);
+  margin-bottom: var(--dc-initial-margin-bottom);
+  font-size: var(--dc-initial-font-size);
+}
+
+/* Head Numbering (requires is-head-num class on body) */
+.is-head-num .markdown-preview-section {
+  counter-reset: h1-counter h2-counter h3-counter h4-counter h5-counter h6-counter;
+}
+.is-head-num .markdown-preview-section .heading-wrapper { counter-increment: none; }
+.is-head-num .markdown-preview-section h1 {
+  counter-increment: h1-counter;
+  counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter;
+}
+.is-head-num .markdown-preview-section h2 {
+  counter-increment: h2-counter;
+  counter-reset: h3-counter h4-counter h5-counter h6-counter;
+}
+.is-head-num .markdown-preview-section h3 {
+  counter-increment: h3-counter;
+  counter-reset: h4-counter h5-counter h6-counter;
+}
+.is-head-num .markdown-preview-section h4 {
+  counter-increment: h4-counter;
+  counter-reset: h5-counter h6-counter;
+}
+.is-head-num .markdown-preview-section h5 {
+  counter-increment: h5-counter;
+  counter-reset: h6-counter;
+}
+.is-head-num .markdown-preview-section h6 {
+  counter-increment: h6-counter;
+}
+.is-head-num .markdown-preview-section .heading-wrapper h1 .heading-anchor { margin-left: 0.45em; }
+.is-head-num .markdown-preview-section .heading-wrapper h1 .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter, upper-roman);
+}
+.is-head-num .markdown-preview-section .heading-wrapper h2 .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter) "." counter(h2-counter);
+}
+.is-head-num .markdown-preview-section .heading-wrapper h3 .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter);
+}
+.is-head-num .markdown-preview-section .heading-wrapper h4 .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter);
+}
+.is-head-num .markdown-preview-section .heading-wrapper h5 .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter);
+}
+.is-head-num .markdown-preview-section .heading-wrapper h6 .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter);
+}
+.is-head-num .outline .outline-heading-link .heading-anchor.is-heading-anchor-mode {
+  display: inline !important;
+}
+.is-head-num .outline .outline-heading-link .heading-anchor.is-heading-anchor-mode::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter);
+  display: inline;
+  margin-right: 0.3em;
+  font-weight: normal;
+}
+
+/* Abbreviations */
+abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+/* Keyboard Keys */
+kbd {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.875em;
+  padding: 0.1em 0.5em;
+  border: 1px solid var(--text-muted-light);
+  border-radius: 6px;
+  box-shadow:
+    inset 0 -1px 0 var(--shadow-color),
+    0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-code-light);
+  color: var(--text-primary-light);
+}
+
+/* Definition Lists */
+dt { font-weight: 600; }
+dd { margin-left: 1em; margin-bottom: 0.5em; }
+
+/* Sup/Sub */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* Highlight */
+mark {
+  background-color: #fff8c5;
+  color: var(--text-primary-light);
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}
+
+/* ================================================
+   15. Responsive Font Sizes
+   ================================================ */
+
+@media screen and (max-width: 600px) {
+  .markdown-source-view.markdown-source-view.markdown-source-view p,
+  .markdown-source-view.markdown-source-view.markdown-source-view ol,
+  .markdown-source-view.markdown-source-view.markdown-source-view ul { font-size: 15px; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h1 { font-size: 1.35em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h2 { font-size: 1.25em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h3 { font-size: 1.12em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h4,
+  .markdown-source-view.markdown-source-view.markdown-source-view h5,
+  .markdown-source-view.markdown-source-view.markdown-source-view h6 { font-size: 1em; }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .markdown-source-view.markdown-source-view.markdown-source-view p,
+  .markdown-source-view.markdown-source-view.markdown-source-view ol,
+  .markdown-source-view.markdown-source-view.markdown-source-view ul { font-size: 16px; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h1 { font-size: 1.5em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h2 { font-size: 1.35em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h3 { font-size: 1.2em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h4,
+  .markdown-source-view.markdown-source-view.markdown-source-view h5,
+  .markdown-source-view.markdown-source-view.markdown-source-view h6 { font-size: 1em; }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .markdown-source-view.markdown-source-view.markdown-source-view p,
+  .markdown-source-view.markdown-source-view.markdown-source-view ol,
+  .markdown-source-view.markdown-source-view.markdown-source-view ul { font-size: 17px; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h1 { font-size: 1.7em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h2 { font-size: 1.45em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h3 { font-size: 1.25em; }
+}
+
+@media screen and (min-width: 1200px) {
+  .markdown-source-view.markdown-source-view.markdown-source-view p,
+  .markdown-source-view.markdown-source-view.markdown-source-view ol,
+  .markdown-source-view.markdown-source-view.markdown-source-view ul { font-size: 18px; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h1 { font-size: 1.85em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h2 { font-size: 1.55em; }
+  .markdown-source-view.markdown-source-view.markdown-source-view h3 { font-size: 1.32em; }
+}
+
+/* ================================================
+   16. Dark Mode
+   ================================================ */
+
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-source-view {
+  color: var(--text-primary-dark);
+}
+.theme-dark .markdown-preview-view p,
+.theme-dark .markdown-source-view p {
+  color: var(--text-primary-dark);
+}
+
+/* Dark headings */
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-preview-view h4,
+.theme-dark .markdown-preview-view h5,
+.theme-dark .markdown-preview-view h6,
+.theme-dark .markdown-source-view h1,
+.theme-dark .markdown-source-view h2,
+.theme-dark .markdown-source-view h3,
+.theme-dark .markdown-source-view h4,
+.theme-dark .markdown-source-view h5,
+.theme-dark .markdown-source-view h6,
+.theme-dark .markdown-source-view .HyperMD-header-1,
+.theme-dark .markdown-source-view .HyperMD-header-2,
+.theme-dark .markdown-source-view .HyperMD-header-3,
+.theme-dark .markdown-source-view .HyperMD-header-4,
+.theme-dark .markdown-source-view .HyperMD-header-5,
+.theme-dark .markdown-source-view .HyperMD-header-6,
+.theme-dark .markdown-source-view .inline-title[data-level='1'],
+.theme-dark .markdown-source-view .inline-title[data-level='2'],
+.theme-dark .markdown-source-view .inline-title[data-level='3'],
+.theme-dark .markdown-source-view .inline-title[data-level='4'],
+.theme-dark .markdown-source-view .inline-title[data-level='5'],
+.theme-dark .markdown-source-view .inline-title[data-level='6'] {
+  color: var(--text-primary-dark);
+}
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-source-view .HyperMD-header-1,
+.theme-dark .markdown-source-view .HyperMD-header-2 {
+  border-bottom-color: transparent;
+}
+.theme-dark .markdown-preview-view h4,
+.theme-dark .markdown-source-view .HyperMD-header-4 {
+  border-left-color: var(--heading-decor-color-dark);
+}
+
+/* Dark links */
+.theme-dark .markdown-preview-view a,
+.theme-dark .markdown-source-view a {
+  color: var(--link-color-dark);
+}
+.theme-dark .markdown-preview-view a:focus-visible,
+.theme-dark .markdown-source-view a:focus-visible {
+  outline-color: #4493f87c;
+}
+.theme-dark .markdown-preview-view a.is-unresolved,
+.theme-dark .markdown-source-view a.is-unresolved {
+  color: var(--link-is-unresolved-dark);
+  background-color: #da36330d;
+  border-radius: 4px;
+  padding: 0 0.1em;
+}
+.theme-dark .markdown-preview-view a.is-unresolved:hover,
+.theme-dark .markdown-source-view a.is-unresolved:hover {
+  color: var(--link-is-unresolved-hover-dark);
+  background-color: #da36331a;
+  text-decoration-color: var(--link-is-unresolved-hover-dark);
+}
+.theme-dark .markdown-preview-view a.linkis-link,
+.theme-dark .markdown-source-view a.linkis-link {
+  color: var(--link-color-dark);
+}
+.theme-dark .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.theme-dark .markdown-source-view.mod-cm6 .cm-hmd-internal-link.cm-underline,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link.cm-underline,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url,
+.theme-dark .markdown-source-view.mod-cm6 span.cm-underline[draggable="true"] {
+  color: var(--link-color-dark) !important;
+}
+.theme-dark .markdown-source-view .cm-hmd-internal-link.cm-link-alias-unresolved {
+  color: var(--link-is-unresolved-dark) !important;
+}
+
+/* Dark lists */
+.theme-dark .markdown-preview-view li::marker,
+.theme-dark .markdown-source-view li::marker {
+  color: var(--text-muted-dark);
+}
+.theme-dark .markdown-preview-view ul,
+.theme-dark .markdown-source-view ul { list-style-type: disc; }
+.theme-dark .markdown-preview-view ul ul,
+.theme-dark .markdown-source-view ul ul { list-style-type: circle; }
+.theme-dark .markdown-preview-view ul ul ul,
+.theme-dark .markdown-source-view ul ul ul { list-style-type: square; }
+
+/* Dark blockquote */
+.theme-dark .markdown-preview-view blockquote,
+.theme-dark .markdown-source-view blockquote,
+.theme-dark .markdown-source-view .HyperMD-quote {
+  border-left-color: var(--blockquote-border-dark);
+  background-color: transparent;
+  color: var(--text-muted-dark);
+}
+.theme-dark .markdown-preview-view blockquote blockquote,
+.theme-dark .markdown-source-view blockquote blockquote,
+.theme-dark .markdown-source-view .HyperMD-quote .HyperMD-quote {
+  border-left-color: var(--blockquote-border-dark);
+}
+.theme-dark .markdown-source-view.mod-cm6 .HyperMD-quote {
+  box-shadow: inset 3px 0 0 0 var(--blockquote-border-dark) !important;
+}
+
+/* Dark code */
+.theme-dark .markdown-preview-view code,
+.theme-dark .markdown-source-view code,
+.theme-dark .markdown-source-view .cm-inline-code {
+  background-color: var(--bg-code-dark);
+  color: var(--text-primary-dark);
+}
+.theme-dark .markdown-preview-view pre,
+.theme-dark .markdown-source-view pre {
+  background-color: var(--bg-code-dark);
+  color: var(--text-primary-dark);
+}
+.theme-dark .markdown-source-view .markdown-source-view .cm-preview-code-block,
+.theme-dark .markdown-source-view .markdown-source-view .cm-preview-code-block .highlight,
+.theme-dark .markdown-source-view .markdown-source-view .cm-preview-code-block .highlight pre,
+.theme-dark .markdown-source-view .markdown-source-view .cm-preview-code-block code,
+.theme-dark .markdown-source-view .markdown-source-view .HyperMD-codeblock,
+.theme-dark .markdown-source-view .markdown-source-view .HyperMD-codeblock-begin,
+.theme-dark .markdown-source-view .markdown-source-view .HyperMD-codeblock-end,
+.theme-dark .markdown-source-view .markdown-source-view .HyperMD-codeblock .cm-line {
+  background: var(--bg-code-dark) !important;
+  --code-background: var(--bg-code-dark) !important;
+}
+.theme-dark .markdown-preview-view .tag-list a code,
+.theme-dark .markdown-preview-view .markdown-rendered a code,
+.theme-dark .markdown-source-view .tag-list a code,
+.theme-dark .markdown-source-view .markdown-rendered a code {
+  background-color: var(--bg-code-dark);
+  color: var(--text-primary-dark);
+}
+
+/* Dark tables */
+.theme-dark .markdown-preview-view table,
+.theme-dark .markdown-source-view table {
+  border-color: var(--table-border-dark);
+}
+.theme-dark .markdown-preview-view th,
+.theme-dark .markdown-preview-view td,
+.theme-dark .markdown-source-view th,
+.theme-dark .markdown-source-view td {
+  border-color: var(--table-border-dark);
+}
+.theme-dark .markdown-preview-view tr:nth-child(2n),
+.theme-dark .markdown-source-view tr:nth-child(2n) {
+  background-color: var(--table-stripe-dark);
+}
+
+/* Dark HR */
+.theme-dark .markdown-preview-view hr,
+.theme-dark .markdown-source-view hr {
+  background: var(--hr-gradient-dark);
+}
+
+/* Dark task list */
+.theme-dark .markdown-preview-view .task-list-item.completed,
+.theme-dark .markdown-source-view .task-list-item.completed {
+  color: var(--text-muted-dark);
+}
+.theme-dark .markdown-preview-view .task-list-item-checkbox,
+.theme-dark .markdown-source-view .task-list-item-checkbox {
+  color: var(--text-muted-dark);
+}
+.theme-dark .markdown-preview-view .task-list-item input[type="checkbox"]:checked,
+.theme-dark .markdown-source-view .task-list-item input[type="checkbox"]:checked {
+  accent-color: #4493f8;
+}
+.theme-dark .markdown-preview-view .task-list-item input[type="checkbox"]:checked::before,
+.theme-dark .markdown-source-view .task-list-item input[type="checkbox"]:checked::before {
+  background: #4493f8;
+  border-color: #4493f8;
+}
+
+/* Dark tags */
+.theme-dark .tag {
+  background-color: var(--tag-bg-dark);
+  color: var(--tag-text-dark);
+}
+
+/* Dark outline */
+.theme-dark .outline-heading-link:hover {
+  color: var(--link-hover-dark);
+}
+
+/* Dark callouts */
+.theme-dark .callout {
+  background-color: var(--bg-callout-dark);
+}
+.theme-dark .callout-title .callout-fold::before,
+.theme-dark .callout-title-inner .callout-fold::before {
+  color: var(--text-muted-dark);
+}
+.theme-dark .callout-title .callout-fold:hover::before,
+.theme-dark .callout-title-inner .callout-fold:hover::before {
+  color: var(--text-primary-dark);
+}
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="cite"] {
+  --callout-color: 220, 130, 70;
+  background-color: #161b22;
+}
+
+/* Dark dropcap */
+.theme-dark p.has-dropcap.has-first-letter::first-letter {
+  color: var(--drop-cap-color-dark) !important;
+  opacity: 0.9;
+}
+
+/* Dark footnotes */
+.theme-dark .markdown-preview-section .footnotes {
+  border-top-color: var(--table-border-dark);
+}
+.theme-dark .markdown-preview-section .footnote-ref a,
+.theme-dark .markdown-preview-view .footnote-ref a,
+.theme-dark .markdown-source-view .footnote-ref a {
+  color: var(--link-color-dark) !important;
+}
+.theme-dark .markdown-rendered sup:not(:has(a)) {
+  color: var(--text-muted-dark);
+  background-color: var(--tag-bg-dark);
+}
+.theme-dark .markdown-rendered sup:not(:has(a)) a[href^="#fn"] {
+  color: var(--text-muted-dark);
+  background-color: var(--tag-bg-dark);
+}
+.theme-dark .markdown-preview-view .footnotes .footnote-item::before,
+.theme-dark .markdown-source-view .footnotes .footnote-item::before {
+  color: var(--text-muted-dark);
+}
+.theme-dark .markdown-preview-view .footnotes .footnote-item p,
+.theme-dark .markdown-source-view .footnotes .footnote-item p {
+  color: var(--text-primary-dark);
+}
+.theme-dark .markdown-preview-view .footnotes .footnote-item .footnote-backref,
+.theme-dark .markdown-source-view .footnotes .footnote-item .footnote-backref {
+  color: var(--link-color-dark) !important;
+}
+.theme-dark .markdown-preview-view .footnotes .footnote-item sup a,
+.theme-dark .markdown-source-view .footnotes .footnote-item sup a {
+  color: var(--link-color-dark) !important;
+}
+
+/* Dark keyboard key */
+.theme-dark kbd {
+  background-color: var(--bg-code-dark);
+  border-color: var(--text-muted-dark);
+  box-shadow:
+    inset 0 -1px 0 var(--table-border-dark),
+    0 1px 0 rgba(0, 0, 0, 0.3);
+  color: var(--text-primary-dark);
+}
+
+/* Dark highlight */
+.theme-dark mark {
+  background-color: #4d3800;
+  color: var(--text-primary-dark);
+}
+
+/* Dark frontmatter */
+.theme-dark .markdown-preview-view .frontmatter-container,
+.theme-dark .markdown-source-view .frontmatter-container {
+  color: var(--text-muted-dark);
+}
+
+/* ================================================
+   17. Print Styles
+   ================================================ */
+
+@media print {
+  .markdown-preview-view a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #666;
+  }
+  .markdown-preview-view img {
+    max-width: 100%;
+    height: auto;
+  }
+}
