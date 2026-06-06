@@ -619,48 +619,10 @@ div.markdown-source-view .CodeMirror-activeline-background.CodeMirror-linebackgr
    10. Task Lists
    ================================================ */
 
-.markdown-preview-view .task-list-item,
-.markdown-source-view .task-list-item {
-  list-style-type: none;
-  margin-left: -1.5em;
-  padding-left: 0;
-  text-indent: 0;
-  position: relative;
-}
-.markdown-preview-view .task-list-item-checkbox,
-.markdown-source-view .task-list-item-checkbox {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0;
-  margin-right: 0.55em;
-  width: 14px;
-  height: 14px;
-  opacity: 0.65;
-  cursor: pointer;
-  border: 2px solid currentColor;
-  border-radius: 3px;
-  background: none;
-  color: var(--text-muted-light);
-}
-.markdown-preview-view .task-list-item input[type="checkbox"],
-.markdown-source-view .task-list-item input[type="checkbox"] {
-  position: relative;
-  top: 3px;
-  margin-right: 0.55em;
-}
-.markdown-preview-view .task-list-item input[type="checkbox"]:checked,
-.markdown-source-view .task-list-item input[type="checkbox"]:checked {
+.markdown-preview-view .task-list-item input[type="checkbox"]:checked {
   accent-color: #529cca;
 }
-.markdown-preview-view .task-list-item input[type="checkbox"]:checked::before,
-.markdown-source-view .task-list-item input[type="checkbox"]:checked::before {
-  background: #529cca;
-  border-color: #529cca;
-}
-.markdown-preview-view .task-list-item.completed,
-.markdown-source-view .task-list-item.completed {
+.markdown-preview-view .task-list-item.completed {
   color: var(--text-muted-light);
   opacity: 0.5;
   text-decoration: line-through;
@@ -1290,20 +1252,16 @@ mark {
 }
 
 /* Dark task list */
-.theme-dark .markdown-preview-view .task-list-item.completed,
-.theme-dark .markdown-source-view .task-list-item.completed {
+.theme-dark .markdown-preview-view .task-list-item.completed {
   color: var(--text-muted-dark);
 }
-.theme-dark .markdown-preview-view .task-list-item-checkbox,
-.theme-dark .markdown-source-view .task-list-item-checkbox {
+.theme-dark .markdown-preview-view .task-list-item-checkbox {
   color: var(--text-muted-dark);
 }
-.theme-dark .markdown-preview-view .task-list-item input[type="checkbox"]:checked,
-.theme-dark .markdown-source-view .task-list-item input[type="checkbox"]:checked {
+.theme-dark .markdown-preview-view .task-list-item input[type="checkbox"]:checked {
   accent-color: #4493f8;
 }
-.theme-dark .markdown-preview-view .task-list-item input[type="checkbox"]:checked::before,
-.theme-dark .markdown-source-view .task-list-item input[type="checkbox"]:checked::before {
+.theme-dark .markdown-preview-view .task-list-item input[type="checkbox"]:checked::before {
   background: #4493f8;
   border-color: #4493f8;
 }
